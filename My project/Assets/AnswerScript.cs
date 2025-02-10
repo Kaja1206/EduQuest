@@ -9,16 +9,24 @@ public class AnswerScript : MonoBehaviour
 
     public void Answer()
     {
+        if (quizManager == null)
+        {
+            Debug.LogError("QuizManager reference is missing!");
+            return;
+        }
+
         if (isCorrect)
         {
             Debug.Log("Correct Answer");
+            quizManager.correct();
         }
         else
         {
             Debug.Log("Wrong Answer");
+            quizManager.wrong();
         }
-
-        quizManager.correct(); // Calls correct() to move to the next question
     }
 }
+
+
 

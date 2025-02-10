@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
@@ -9,28 +10,77 @@ public class QuizManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
 
-    public Text QuestionTxt; // FIXED: Changed from TextAlignment to Text
+    public GameObject Quizpanel;
+    public GameObject GoPanel;
+
+    public Text QuestionTxt;
+    public Text ScoreTxt;
+
+    int totalQuestions = 0;
+    public int score;
 
     private void Start()
     {
+        totalQuestions = QnA.Count;
+        GoPanel.SetActive(false);
         generateQuestion();
+    }
+
+    public void retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void GameOver()
+    {
+        Quizpanel.SetActive(false);
+        GoPanel.SetActive(true);
+        ScoreTxt.text = score + "/" + totalQuestions;
     }
 
     public void correct()
     {
-        if (QnA.Count > 0) // Prevents error if list is empty
+        score += 1;
+        RemoveCurrentQuestion();
+    }
+
+    public void wrong()
+    {
+        RemoveCurrentQuestion();
+    }
+
+    void RemoveCurrentQuestion()
+    {
+        if (QnA.Count > 0)
         {
             QnA.RemoveAt(currentQuestion);
+        }
+
+        if (QnA.Count > 0)
+        {
             generateQuestion();
         }
         else
         {
-            Debug.Log("No more questions available.");
+            GameOver();
         }
     }
 
     void SetAnswer()
     {
+        if (QnA.Count == 0)
+        {
+            GameOver();
+            return;
+        }
+
+        // Prevent array index out of bounds error
+        if (QnA[currentQuestion].Answers.Length != options.Length)
+        {
+            Debug.LogError("Mismatch between answer choices and UI options. Check your data!");
+            return;
+        }
+
         for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
@@ -45,19 +95,17 @@ public class QuizManager : MonoBehaviour
 
     void generateQuestion()
     {
-        if (QnA.Count > 0) // Prevents selecting from an empty list
-         {
+        if (QnA.Count > 0)
+        {
             currentQuestion = Random.Range(0, QnA.Count);
-
             QuestionTxt.text = QnA[currentQuestion].Question;
             SetAnswer();
         }
         else
         {
             Debug.Log("No more questions available.");
+            GameOver();
         }
     }
-
-
 }
 
