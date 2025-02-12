@@ -471,27 +471,76 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QnA:
-  - Question: 9 + 12 = ?
-    Answers:
-    - 31
-    - 24
-    - 20
-    - 21
-    CorrectAnswer: 4
-  - Question: 10 x 0 = ?
+  - Question: 24 + 6 = ?
     Answers:
     - 2
     - 50
-    - 0
+    - 30
     - 54
     CorrectAnswer: 3
-  - Question: 10 - 0 = ?
+  - Question: 15 + 8 = ?
     Answers:
-    - 10
+    - 23
     - 20
     - 0
     - 11
     CorrectAnswer: 1
+  - Question: 37 + 6 = ?
+    Answers:
+    - 43
+    - 40
+    - 41
+    - 42
+    CorrectAnswer: 1
+  - Question: 19 + 7 = ?
+    Answers:
+    - 21
+    - 23
+    - 26
+    - 42
+    CorrectAnswer: 3
+  - Question: 28 + 5 = ?
+    Answers:
+    - 32
+    - 22
+    - 25
+    - 33
+    CorrectAnswer: 4
+  - Question: 4 + 17 = ?
+    Answers:
+    - 21
+    - 22
+    - 20
+    - 19
+    CorrectAnswer: 1
+  - Question: 29 + 8 = ?
+    Answers:
+    - 36
+    - 37
+    - 30
+    - 40
+    CorrectAnswer: 2
+  - Question: 6 + 15 = ?
+    Answers:
+    - 20
+    - 37
+    - 21
+    - 22
+    CorrectAnswer: 3
+  - Question: 7 + 28 = ?
+    Answers:
+    - 35
+    - 36
+    - 37
+    - 38
+    CorrectAnswer: 1
+  - Question: 9 + 13 = ?
+    Answers:
+    - 20
+    - 37
+    - 21
+    - 22
+    CorrectAnswer: 4
   options:
   - {fileID: 1018359932}
   - {fileID: 309134416}
