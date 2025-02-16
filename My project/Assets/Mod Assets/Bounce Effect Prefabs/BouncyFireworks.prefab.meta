@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 01739b94a2c17405c95abb982bdd4498
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Bounce Effect Prefabs/BouncyFireworks.prefab
+  uploadId: 683079

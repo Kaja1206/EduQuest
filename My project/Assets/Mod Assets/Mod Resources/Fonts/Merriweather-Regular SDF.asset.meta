@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ea4179ba609564f33b822e1be581b321
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Mod Resources/Fonts/Merriweather-Regular SDF.asset
+  uploadId: 683079

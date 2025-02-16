@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 92a247bf9ecb64679afb9551e73a24f9
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Trail Prefabs/LongTrail.prefab
+  uploadId: 683079

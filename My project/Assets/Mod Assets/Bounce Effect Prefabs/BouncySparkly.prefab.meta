@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 757c3553bc78148bab809d2e1d440dcf
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Bounce Effect Prefabs/BouncySparkly.prefab
+  uploadId: 683079

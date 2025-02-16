@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2abf75d6e0d8a4aa6910fae6ee5d638b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Mod Resources/Fonts/Raleway-Regular SDF.asset
+  uploadId: 683079

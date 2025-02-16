@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ab5640a546e165146a4f6cfefff2c4d6
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/2D Props/Ancient/Pillar.prefab
+  uploadId: 683079

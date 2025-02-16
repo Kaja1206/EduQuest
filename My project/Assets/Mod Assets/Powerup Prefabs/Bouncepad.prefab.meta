@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dd00d6cc7f67e5e45afd4c44b776fd91
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Powerup Prefabs/Bouncepad.prefab
+  uploadId: 683079

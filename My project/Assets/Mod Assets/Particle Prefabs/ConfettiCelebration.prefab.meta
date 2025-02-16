@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 087ff866c6a14f841a4a77a4168eecc5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Particle Prefabs/ConfettiCelebration.prefab
+  uploadId: 683079

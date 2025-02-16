@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: beaacbd322178c84fb479b50ad085ebe
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/2D Props/Nature/PalmTree.prefab
+  uploadId: 683079

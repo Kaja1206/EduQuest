@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9f2793e97c0086e4ba601a5e059272ee
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Powerup Prefabs/Speedpad.prefab
+  uploadId: 683079

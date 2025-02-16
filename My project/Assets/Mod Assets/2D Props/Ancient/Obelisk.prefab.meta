@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2ab74df90f3902b43bbc93eedcc7fbe4
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/2D Props/Ancient/Obelisk.prefab
+  uploadId: 683079

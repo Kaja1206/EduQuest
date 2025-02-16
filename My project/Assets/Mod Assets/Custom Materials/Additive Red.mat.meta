@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 22aa0ea19af7a4c8a9ca5447c6c7447f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Custom Materials/Additive Red.mat
+  uploadId: 683079
