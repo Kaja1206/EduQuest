@@ -38,15 +38,23 @@ public class QuizManager : MonoBehaviour
         ScoreTxt.text = score + "/" + totalQuestions;
     }
 
-    public void correct()
+    public void Correct()
     {
         score += 1;
-        RemoveCurrentQuestion();
+        QnA.RemoveAt(currentQuestion);
+        StartCoroutine(WaitForNext());
+
     }
 
-    public void wrong()
+    public void Wrong() 
     {
         RemoveCurrentQuestion();
+        StartCoroutine(WaitForNext());
+    }
+    IEnumerator WaitForNext()
+    {
+        yield return new WaitForSeconds(1);
+        generateQuestion();
     }
 
     void RemoveCurrentQuestion()
@@ -83,6 +91,7 @@ public class QuizManager : MonoBehaviour
 
         for (int i = 0; i < options.Length; i++)
         {
+            
             options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];
 

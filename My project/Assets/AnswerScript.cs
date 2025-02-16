@@ -1,29 +1,24 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnswerScript : MonoBehaviour
 {
     public bool isCorrect = false;
     public QuizManager quizManager;
-
     public void Answer()
     {
-        if (quizManager == null)
-        {
-            Debug.LogError("QuizManager reference is missing!");
-            return;
-        }
-
         if (isCorrect)
         {
             Debug.Log("Correct Answer");
-            quizManager.correct();
+            quizManager.Correct();
         }
         else
         {
+           
             Debug.Log("Wrong Answer");
-            quizManager.wrong();
+            quizManager.Wrong();
         }
     }
 }
