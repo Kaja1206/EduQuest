@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
-    public List<QuestionsAnswers> QnA;
+    public List<QuestionAndAnswers> QnA;
     public GameObject[] options;
     public int currentQuestion;
 
