@@ -7,6 +7,7 @@ public class AnswerScript : MonoBehaviour
 {
     public bool isCorrect = false;
     public QuizManager quizManager;
+
     public void Answer()
     {
         if (isCorrect)
@@ -16,12 +17,12 @@ public class AnswerScript : MonoBehaviour
         }
         else
         {
-           
             Debug.Log("Wrong Answer");
             quizManager.Wrong();
         }
     }
 }
+
 
 
 
