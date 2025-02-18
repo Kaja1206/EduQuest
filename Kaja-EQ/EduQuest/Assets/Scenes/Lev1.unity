@@ -18519,35 +18519,35 @@ MonoBehaviour:
   sounds:
   - name: GameOver
     clip: {fileID: 8300000, guid: 2dfa5f60e1004a047a0ed1a6b22cd201, type: 3}
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: f6d2881e18ef5bd40ae5fbe30915cee6, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Coins
     clip: {fileID: 8300000, guid: 035591ef55dc7f342a6f86e674e0b88e, type: 3}
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: f6d2881e18ef5bd40ae5fbe30915cee6, type: 2}
     volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: 6d279fcf6a71e624a9d083f1dcc99370, type: 3}
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: f6d2881e18ef5bd40ae5fbe30915cee6, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: CheckPoint
     clip: {fileID: 8300000, guid: 9c78632e28fa32845bdd6b09972c08a0, type: 3}
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: f6d2881e18ef5bd40ae5fbe30915cee6, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Run
     clip: {fileID: 8300000, guid: d4d5c41ef674f1f43b1a8fdb321ce299, type: 3}
-    mixer: {fileID: 0}
+    mixer: {fileID: 24300002, guid: f6d2881e18ef5bd40ae5fbe30915cee6, type: 2}
     volume: 1
     pitch: 1
     loop: 0
