@@ -2,9 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class QuizManager : MonoBehaviour
- {
+{
     public List<QuestionAndAnswers> QnA;
     public GameObject[] options;
     public int currentQuestion;
@@ -18,6 +19,8 @@ public class QuizManager : MonoBehaviour
     int totalQuestions = 0;
     public int score;
 
+    public float delayBetweenQuestions = 1f; // Delay before moving to the next question
+
     private void Start()
     {
         totalQuestions = QnA.Count;
@@ -26,9 +29,10 @@ public class QuizManager : MonoBehaviour
     }
 
     public void retry()
-    { 
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
     void GameOver()
     {
         QuizPanel.SetActive(false);
@@ -38,15 +42,25 @@ public class QuizManager : MonoBehaviour
 
     public void correct()
     {
-        //when you are right
         score += 1;
-        QnA.RemoveAt(currentQuestion);
-        generateQuestion();
+        StartCoroutine(DelayedNextQuestion());
     }
 
     public void wrong()
     {
-        //when you answer wrong
+        StartCoroutine(DelayedNextQuestion());
+    }
+
+    IEnumerator DelayedNextQuestion()
+    {
+        yield return new WaitForSeconds(delayBetweenQuestions);
+
+        // Reset button colors
+        foreach (GameObject option in options)
+        {
+            option.GetComponent<AnswerScript>().ResetButtonColor();
+        }
+
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
     }
@@ -55,12 +69,14 @@ public class QuizManager : MonoBehaviour
     {
         for (int i = 0; i < options.Length; i++)
         {
-            options[i].GetComponent<AnswerScript>().isCorrect = false;
+            AnswerScript answerScript = options[i].GetComponent<AnswerScript>();
+            answerScript.isCorrect = false;
+            answerScript.quizManager = this;
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];
 
             if (QnA[currentQuestion].CorrectAnswer == i + 1)
             {
-                options[i].GetComponent<AnswerScript>().isCorrect = true;
+                answerScript.isCorrect = true;
             }
         }
     }

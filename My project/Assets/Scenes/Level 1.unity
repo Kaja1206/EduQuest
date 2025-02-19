@@ -889,6 +889,7 @@ MonoBehaviour:
   QuestionTxt: {fileID: 267175641}
   ScoreTxt: {fileID: 1248539605}
   score: 0
+  delayBetweenQuestions: 1
 --- !u!4 &312851091
 Transform:
   m_ObjectHideFlags: 0
@@ -3035,7 +3036,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 111.87}
+  m_AnchoredPosition: {x: 0, y: 239}
   m_SizeDelta: {x: 2111.5234, y: 223.744}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248539605
@@ -3691,7 +3692,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000035763, y: -130}
+  m_AnchoredPosition: {x: 0.000035763, y: 0}
   m_SizeDelta: {x: 531.95, y: 195.369}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536765894
