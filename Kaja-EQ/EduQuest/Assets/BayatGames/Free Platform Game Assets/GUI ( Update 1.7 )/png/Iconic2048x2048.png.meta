@@ -1,9 +1,16 @@
 fileFormatVersion: 2
 guid: 2676ff5c94fc9f1489d59bf570d079e3
+AssetOrigin:
+  serializedVersion: 1
+  productId: 85838
+  packageName: Free Platform Game Assets
+  packageVersion: 1.9.4
+  assetPath: Assets/BayatGames/Free Platform Game Assets/GUI ( Update 1.7 )/png/Iconic2048x2048.png
+  uploadId: 484258
 TextureImporter:
-  fileIDToRecycleName: {}
+  internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,9 +27,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -31,16 +41,16 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,11 +64,17 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -68,28 +84,300 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: RedButton
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1851
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e9971b337c0b84f9003d8a58f9409b
+      internalID: -604202528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenButton
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1847
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873e0a571d0538e40b4e18ea883cd943
+      internalID: -1404963767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowButton
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1847
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc436728e3b975843b2dc7090fd3b72c
+      internalID: -936961851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueButton
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1847
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97698fa8f9d04044ebd1379566bc772f
+      internalID: 1942044346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 0710d8a8ac8e6bb4aa9f297ebf17f92e
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-  spritePackingTag: 
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BlueButton: -546740175
+      GreenButton: -1035795733
+      Iconic2048x2048_0: 1293945114
+      Iconic2048x2048_1: 1684508625
+      Iconic2048x2048_10: -834790350
+      Iconic2048x2048_100: -294554155
+      Iconic2048x2048_101: 910389104
+      Iconic2048x2048_102: -2093491790
+      Iconic2048x2048_103: -925672829
+      Iconic2048x2048_104: 1243080487
+      Iconic2048x2048_105: -1870519262
+      Iconic2048x2048_106: -152063128
+      Iconic2048x2048_107: -807580702
+      Iconic2048x2048_108: 1410397287
+      Iconic2048x2048_109: -1251702248
+      Iconic2048x2048_11: -429474421
+      Iconic2048x2048_110: 114563465
+      Iconic2048x2048_111: 456747433
+      Iconic2048x2048_112: 1899352984
+      Iconic2048x2048_113: 127004941
+      Iconic2048x2048_114: 202129765
+      Iconic2048x2048_115: -1500671836
+      Iconic2048x2048_116: 1171979885
+      Iconic2048x2048_117: 500182290
+      Iconic2048x2048_118: -577943895
+      Iconic2048x2048_119: -557130790
+      Iconic2048x2048_12: 833717446
+      Iconic2048x2048_120: 46835916
+      Iconic2048x2048_121: 485180466
+      Iconic2048x2048_122: 741714710
+      Iconic2048x2048_123: -1477289979
+      Iconic2048x2048_124: 702262124
+      Iconic2048x2048_125: 1856357455
+      Iconic2048x2048_126: 1800218583
+      Iconic2048x2048_127: -962452697
+      Iconic2048x2048_128: -66427721
+      Iconic2048x2048_129: -310154083
+      Iconic2048x2048_13: 2095811798
+      Iconic2048x2048_130: -785466409
+      Iconic2048x2048_131: 1565743352
+      Iconic2048x2048_132: 488465901
+      Iconic2048x2048_133: -1643017268
+      Iconic2048x2048_134: -130531016
+      Iconic2048x2048_135: -2042066045
+      Iconic2048x2048_136: -1019401065
+      Iconic2048x2048_137: -119180592
+      Iconic2048x2048_138: -210604635
+      Iconic2048x2048_139: -520364958
+      Iconic2048x2048_14: -831383979
+      Iconic2048x2048_140: -1896730342
+      Iconic2048x2048_141: -980035835
+      Iconic2048x2048_142: 2133842812
+      Iconic2048x2048_143: -1666747863
+      Iconic2048x2048_144: 2099356058
+      Iconic2048x2048_145: 1035076968
+      Iconic2048x2048_146: 803123046
+      Iconic2048x2048_147: 234198958
+      Iconic2048x2048_148: -806820085
+      Iconic2048x2048_149: -1148067876
+      Iconic2048x2048_15: -557639511
+      Iconic2048x2048_150: 1121757622
+      Iconic2048x2048_151: 1243191659
+      Iconic2048x2048_152: 1269539511
+      Iconic2048x2048_153: -1548748148
+      Iconic2048x2048_154: 81276361
+      Iconic2048x2048_155: 1954302303
+      Iconic2048x2048_16: -1169721469
+      Iconic2048x2048_17: 444523136
+      Iconic2048x2048_18: -1501407523
+      Iconic2048x2048_19: -680675950
+      Iconic2048x2048_20: 689939769
+      Iconic2048x2048_21: 866008600
+      Iconic2048x2048_22: 105579989
+      Iconic2048x2048_23: -613870872
+      Iconic2048x2048_24: 1870034310
+      Iconic2048x2048_25: -2083165066
+      Iconic2048x2048_26: 241550142
+      Iconic2048x2048_27: -387202760
+      Iconic2048x2048_28: 1656866245
+      Iconic2048x2048_29: -620442947
+      Iconic2048x2048_30: -1727977745
+      Iconic2048x2048_31: 127859547
+      Iconic2048x2048_32: 1557754171
+      Iconic2048x2048_33: -554385942
+      Iconic2048x2048_34: 289216625
+      Iconic2048x2048_35: -2079705905
+      Iconic2048x2048_36: 895433902
+      Iconic2048x2048_37: -2101781214
+      Iconic2048x2048_38: 2039452652
+      Iconic2048x2048_39: 1302015934
+      Iconic2048x2048_4: -1539791940
+      Iconic2048x2048_40: -1052867656
+      Iconic2048x2048_41: -894707881
+      Iconic2048x2048_42: 1299743445
+      Iconic2048x2048_43: -1059121245
+      Iconic2048x2048_44: -139933021
+      Iconic2048x2048_45: -1518541005
+      Iconic2048x2048_46: -1938902484
+      Iconic2048x2048_47: -870069543
+      Iconic2048x2048_48: 1222101631
+      Iconic2048x2048_49: -968332903
+      Iconic2048x2048_5: 935515337
+      Iconic2048x2048_50: -1877517984
+      Iconic2048x2048_51: -1906806539
+      Iconic2048x2048_52: -625041466
+      Iconic2048x2048_53: 838979187
+      Iconic2048x2048_54: -1557689690
+      Iconic2048x2048_55: -2036780953
+      Iconic2048x2048_56: 1153852750
+      Iconic2048x2048_57: -907986744
+      Iconic2048x2048_58: 1408132418
+      Iconic2048x2048_59: -696438551
+      Iconic2048x2048_6: 1761648817
+      Iconic2048x2048_60: -1484529720
+      Iconic2048x2048_61: -595918028
+      Iconic2048x2048_62: 45962472
+      Iconic2048x2048_63: 1399428891
+      Iconic2048x2048_64: -1434263089
+      Iconic2048x2048_65: -542099629
+      Iconic2048x2048_66: -497196976
+      Iconic2048x2048_67: 1439168915
+      Iconic2048x2048_68: 1882259996
+      Iconic2048x2048_69: -155241494
+      Iconic2048x2048_7: -1197872298
+      Iconic2048x2048_70: -95577087
+      Iconic2048x2048_71: 1125434217
+      Iconic2048x2048_72: 1213713115
+      Iconic2048x2048_73: 640136550
+      Iconic2048x2048_74: -1390248948
+      Iconic2048x2048_75: -1872975499
+      Iconic2048x2048_76: -1345167392
+      Iconic2048x2048_77: 955028508
+      Iconic2048x2048_78: 1263897779
+      Iconic2048x2048_79: -2043985978
+      Iconic2048x2048_8: -1972079761
+      Iconic2048x2048_80: -929309992
+      Iconic2048x2048_81: -1405886088
+      Iconic2048x2048_82: -2065034455
+      Iconic2048x2048_83: -1520171416
+      Iconic2048x2048_84: -1739056814
+      Iconic2048x2048_85: -2005694011
+      Iconic2048x2048_86: -1404890365
+      Iconic2048x2048_87: -995912650
+      Iconic2048x2048_88: -375859208
+      Iconic2048x2048_89: -1442207309
+      Iconic2048x2048_9: 1169594098
+      Iconic2048x2048_90: -1722408801
+      Iconic2048x2048_91: 375404653
+      Iconic2048x2048_92: 1686614067
+      Iconic2048x2048_93: 1124974346
+      Iconic2048x2048_94: -177523530
+      Iconic2048x2048_95: 1567562938
+      Iconic2048x2048_96: 1320601635
+      Iconic2048x2048_97: -1038244694
+      Iconic2048x2048_98: 265800096
+      Iconic2048x2048_99: 649614285
+      RedButton: 501383476
+      YellowButton: 1270945318
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 85838
-  packageName: Free Platform Game Assets
-  packageVersion: 1.9.4
-  assetPath: Assets/BayatGames/Free Platform Game Assets/GUI ( Update 1.7 )/png/Iconic2048x2048.png
-  uploadId: 484258
