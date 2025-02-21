@@ -1,18 +1,25 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class ShuffleList
+public abstract class ShuffleList
 {
-    public static List<T> ShuffleListItems<T>(List<T> inputList)
+    public static List<E> ShuffleListItems<E>(List<E> inputList)
     {
-        List<T> shuffledList = new List<T>(inputList);
-        int n = shuffledList.Count;
-        for (int i = n - 1; i > 0; i--)
+        List<E> originalList = new List<E>();
+        originalList.AddRange(inputList);
+        List<E> randomList = new List<E>();
+
+        System.Random r = new System.Random();
+        int randomIndex = 0;
+        while (originalList.Count > 0)
         {
-            int rand = Random.Range(0, i + 1);
-            (shuffledList[i], shuffledList[rand]) = (shuffledList[rand], shuffledList[i]); // Swap elements
+            randomIndex = r.Next(0, originalList.Count); //Choose a random object in the list
+            randomList.Add(originalList[randomIndex]); //add it to the new, random list
+            originalList.RemoveAt(randomIndex); //remove to avoid duplicates
         }
-        return shuffledList;
+
+        return randomList; //return the new random list
     }
 }
 

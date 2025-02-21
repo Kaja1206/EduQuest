@@ -21,8 +21,8 @@ public class QuizUI : MonoBehaviour
     {
         for (int i = 0; i < options.Count; i++)
         {
-            Button localBtn = options[i];
-            localBtn.onClick.AddListener(() => OnClick(localBtn));
+            Button localbtn = options[i];
+            localbtn.onClick.AddListener(() => OnClick(localbtn));
         }
     }
 
