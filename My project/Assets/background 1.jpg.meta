@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ada30d3ce76b45542b8b4549b8da6690
+guid: 724f0ca70d23599428669c5c55aa4453
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8400501745732419198
-    second: Play-removebg-preview_0
+      213: -5608819318807225731
+    second: background 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Play-removebg-preview_0
+      name: background 1_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 9
-        width: 166
-        height: 72
+        x: 0
+        y: 0
+        width: 736
+        height: 456
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7efd6974d3949470800000000000000
-      internalID: 8400501745732419198
+      spriteID: d7a952ddb887922b0800000000000000
+      internalID: -5608819318807225731
       vertices: []
       indices: 
       edges: []
