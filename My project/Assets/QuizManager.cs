@@ -21,6 +21,12 @@ public class QuizManager : MonoBehaviour
 
     public float delayBetweenQuestions = 1f; // Delay before moving to the next question
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     private void Start()
     {
         totalQuestions = QnA.Count;
@@ -42,12 +48,14 @@ public class QuizManager : MonoBehaviour
 
     public void correct()
     {
+        audioManager.PlaySFX(audioManager.correct);
         score += 1;
         StartCoroutine(DelayedNextQuestion());
     }
 
     public void wrong()
     {
+        audioManager.PlaySFX(audioManager.wrong);
         StartCoroutine(DelayedNextQuestion());
     }
 
