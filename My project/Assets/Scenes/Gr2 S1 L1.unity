@@ -568,81 +568,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &112981597
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 112981598}
-  - component: {fileID: 112981600}
-  - component: {fileID: 112981599}
-  m_Layer: 5
-  m_Name: Stone (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &112981598
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112981597}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1668116572}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 349.99997, y: -42.93597}
-  m_SizeDelta: {x: 300, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &112981599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112981597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0c47ba8160570845bb8b8cad5a323f1, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &112981600
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112981597}
-  m_CullTransparentMesh: 1
 --- !u!1 &241050335
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,9 +681,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -111, y: 122.79}
+  m_AnchoredPosition: {x: 402, y: 10.373}
   m_SizeDelta: {x: 130.943, y: 100.745}
-  m_Pivot: {x: 0.5, y: 0.50000006}
+  m_Pivot: {x: 0.49999976, y: 0.50000036}
 --- !u!114 &243549703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,7 +851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDifficulty: 0
   easyQnA:
-  - Question: 14---------30
+  - Question: 14__________30
     Answers:
     - '>'
     - =
@@ -934,7 +859,7 @@ MonoBehaviour:
     - <
     CorrectAnswer: 4
     difficultyLevel: 0
-  - Question: 22----------3
+  - Question: 22__________3
     Answers:
     - <
     - '>'
@@ -942,7 +867,7 @@ MonoBehaviour:
     - <=
     CorrectAnswer: 2
     difficultyLevel: 0
-  - Question: 0.2--------2
+  - Question: 0.2__________2
     Answers:
     - ==
     - =
@@ -950,7 +875,7 @@ MonoBehaviour:
     - '>'
     CorrectAnswer: 3
     difficultyLevel: 0
-  - Question: 11-------11
+  - Question: 11__________11
     Answers:
     - 0
     - '!='
@@ -958,7 +883,7 @@ MonoBehaviour:
     - <=
     CorrectAnswer: 3
     difficultyLevel: 0
-  - Question: 1.0---------3.5
+  - Question: 1.0__________3.5
     Answers:
     - =
     - <=
@@ -966,86 +891,8 @@ MonoBehaviour:
     - '>'
     CorrectAnswer: 3
     difficultyLevel: 0
-  mediumQnA:
-  - Question: 'What shape have more? '
-    Answers:
-    - heart
-    - Star
-    - Circle
-    - Oval
-    CorrectAnswer: 4
-    difficultyLevel: 1
-  - Question: How many faces shape Square Have?
-    Answers:
-    - 2
-    - 6
-    - 5
-    - 8
-    CorrectAnswer: 2
-    difficultyLevel: 1
-  - Question: How many faces Triagle have?
-    Answers:
-    - 4
-    - 2
-    - 3
-    - 5
-    CorrectAnswer: 1
-    difficultyLevel: 1
-  - Question: Which shape have 4 faces?
-    Answers:
-    - Circle
-    - Triangle
-    - Square
-    - Star
-    CorrectAnswer: 4
-    difficultyLevel: 1
-  - Question: Which  shape have more edges?
-    Answers:
-    - Square
-    - Truangle
-    - Circle
-    - Star
-    CorrectAnswer: 3
-    difficultyLevel: 1
-  hardQnA:
-  - Question: How many edges Cicle have?
-    Answers:
-    - 8
-    - 6
-    - Infinity
-    - 2
-    CorrectAnswer: 3
-    difficultyLevel: 2
-  - Question: How many edges Square have?
-    Answers:
-    - 10
-    - 6
-    - 12
-    - Infinity
-    CorrectAnswer: 3
-    difficultyLevel: 2
-  - Question: Are all side of Rectangle the same size?
-    Answers:
-    - 'Yes '
-    - No
-    CorrectAnswer: 2
-    difficultyLevel: 0
-  - Question: Hard qs
-    Answers:
-    - 1
-    - 2
-    - 3
-    - 4
-    CorrectAnswer: 4
-    difficultyLevel: 0
-  - Question: hard qs 2
-    Answers:
-    - 2
-    - 3
-    - 6
-    - 7
-    CorrectAnswer: 3
-    difficultyLevel: 0
+  mediumQnA: []
+  hardQnA: []
   options:
   - {fileID: 1739916054}
   - {fileID: 1867663631}
@@ -1146,81 +993,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656001230}
-  m_CullTransparentMesh: 1
---- !u!1 &727664980
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 727664981}
-  - component: {fileID: 727664983}
-  - component: {fileID: 727664982}
-  m_Layer: 5
-  m_Name: Stone (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &727664981
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727664980}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1668116572}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 572, y: -42.936}
-  m_SizeDelta: {x: 300, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &727664982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727664980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0c47ba8160570845bb8b8cad5a323f1, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &727664983
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727664980}
   m_CullTransparentMesh: 1
 --- !u!1 &750550668
 GameObject:
@@ -1335,7 +1107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -210.04001, y: -42.795}
+  m_AnchoredPosition: {x: 241.14, y: 185.16}
   m_SizeDelta: {x: 295.228, y: 285.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &759074414
@@ -1410,8 +1182,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 687, y: 355}
-  m_SizeDelta: {x: 130.943, y: 100.745}
+  m_AnchoredPosition: {x: 772.092, y: -60.076}
+  m_SizeDelta: {x: 199.413, y: 320.153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802991984
 MonoBehaviour:
@@ -1567,8 +1339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0080881, y: 289.43}
-  m_SizeDelta: {x: 1822.6, y: 558.87}
+  m_AnchoredPosition: {x: -5.6554, y: 271.636}
+  m_SizeDelta: {x: 1811.3, y: 594.448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837921820
 MonoBehaviour:
@@ -3032,8 +2804,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -640, y: 85}
-  m_SizeDelta: {x: 231.182, y: 225.587}
+  m_AnchoredPosition: {x: -298, y: 185.16}
+  m_SizeDelta: {x: 283.238, y: 285.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1521543729
 MonoBehaviour:
@@ -3378,9 +3150,6 @@ RectTransform:
   - {fileID: 759074413}
   - {fileID: 1953400739}
   - {fileID: 1247004365}
-  - {fileID: 727664981}
-  - {fileID: 2084523405}
-  - {fileID: 112981598}
   - {fileID: 1623717161}
   - {fileID: 1922348148}
   - {fileID: 1553255764}
@@ -3760,7 +3529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 486.72, y: 183.19}
+  m_AnchoredPosition: {x: -101.89, y: -79.066}
   m_SizeDelta: {x: 226.556, y: 242.872}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1790824183
@@ -4315,81 +4084,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051525259}
   m_CullTransparentMesh: 1
---- !u!1 &2084523404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2084523405}
-  - component: {fileID: 2084523407}
-  - component: {fileID: 2084523406}
-  m_Layer: 5
-  m_Name: Stone (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2084523405
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084523404}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1668116572}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: 188}
-  m_SizeDelta: {x: 300, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2084523406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084523404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0c47ba8160570845bb8b8cad5a323f1, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2084523407
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084523404}
-  m_CullTransparentMesh: 1
 --- !u!1 &2130109782
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,8 +4118,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -70, y: 73}
-  m_SizeDelta: {x: -289.859, y: -454.982}
+  m_AnchoredPosition: {x: -0.000061035156, y: 116}
+  m_SizeDelta: {x: -662.927, y: -458.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2130109784
 CanvasRenderer:
@@ -4462,7 +4156,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 140
-    m_Alignment: 1
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
