@@ -229,7 +229,7 @@ TextureImporter:
         serializedVersion: 2
         x: 24
         y: 252
-        width: 231
+        width: 204
         height: 158
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -249,9 +249,9 @@ TextureImporter:
       name: option_buttons-removebg-preview_1
       rect:
         serializedVersion: 2
-        x: 271
+        x: 252
         y: 366
-        width: 43
+        width: 62
         height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
