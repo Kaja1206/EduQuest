@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     public List<QuestionAndAnswers> QnA;
     public GameObject[] options;
     public int currentQuestion;
