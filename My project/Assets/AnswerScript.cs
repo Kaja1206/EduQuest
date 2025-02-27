@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AnswerScript : MonoBehaviour
 {
     public bool isCorrect = false;
-    public QuizManager quizManager;
+    private QuizManager quizManager;
+
+    private void Start()
+    {
+        quizManager = FindObjectOfType<QuizManager>();  // Ensures the reference is set automatically
+    }
 
     public void Answer()
     {
@@ -22,6 +26,7 @@ public class AnswerScript : MonoBehaviour
         }
     }
 }
+
 
 
 
