@@ -410,6 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 11974928}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &213156848
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 11974928}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &259002015
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 11974928}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &355573556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,6 +1057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &383896462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,6 +1072,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &383896463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,6 +1298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 11974928}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &535946580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2410,6 +2416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 11974928}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1092409055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2689,7 +2696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1275359565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3319,6 +3326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 11974928}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1815904028
 GameObject:
   m_ObjectHideFlags: 0

@@ -220,6 +220,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1072,7 +1085,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      option_buttons-removebg-preview_0: -2195815273678356972
+      option_buttons-removebg-preview_1: 4961097540087313832
+      option_buttons-removebg-preview_10: 4628771244104812344
+      option_buttons-removebg-preview_11: -3816699244851282309
+      option_buttons-removebg-preview_12: -6707809474160623557
+      option_buttons-removebg-preview_13: 8682463878210762837
+      option_buttons-removebg-preview_14: 7470104724879362253
+      option_buttons-removebg-preview_15: -1621746986370866570
+      option_buttons-removebg-preview_16: -8742362833451712111
+      option_buttons-removebg-preview_17: 8349669487162862152
+      option_buttons-removebg-preview_18: 3709314751305032442
+      option_buttons-removebg-preview_19: 5288340669910835859
+      option_buttons-removebg-preview_2: -8317505108505563191
+      option_buttons-removebg-preview_20: 1764116873210567227
+      option_buttons-removebg-preview_21: 8829043414666246314
+      option_buttons-removebg-preview_22: -2084257796013515763
+      option_buttons-removebg-preview_23: 4927035949662249306
+      option_buttons-removebg-preview_24: 6575815532712913474
+      option_buttons-removebg-preview_25: -9116852654065717288
+      option_buttons-removebg-preview_26: 2716451334171493442
+      option_buttons-removebg-preview_27: 8847566415961652957
+      option_buttons-removebg-preview_28: -5387074423603181748
+      option_buttons-removebg-preview_29: 8098941617951810421
+      option_buttons-removebg-preview_3: -5258047076688721734
+      option_buttons-removebg-preview_30: 4799452583765518077
+      option_buttons-removebg-preview_31: 6300349695323094172
+      option_buttons-removebg-preview_32: 2704907869201847897
+      option_buttons-removebg-preview_33: -1030598724440338571
+      option_buttons-removebg-preview_34: 2299930032789144603
+      option_buttons-removebg-preview_35: -8031763460773255914
+      option_buttons-removebg-preview_36: -3567251760141812209
+      option_buttons-removebg-preview_37: -4782656355933059060
+      option_buttons-removebg-preview_4: 1188619215836870324
+      option_buttons-removebg-preview_5: -5384492489249049382
+      option_buttons-removebg-preview_6: 3464258342184645399
+      option_buttons-removebg-preview_7: -5943002798034551029
+      option_buttons-removebg-preview_8: -1272855047529491563
+      option_buttons-removebg-preview_9: -4434365632516990000
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

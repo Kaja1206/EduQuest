@@ -6,12 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
-    AudioManager audioManager;
-
-    private void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-    }
     public List<QuestionAndAnswers> QnA;
     public GameObject[] options;
     public int currentQuestion;
@@ -49,14 +43,16 @@ public class QuizManager : MonoBehaviour
         score += 1;
         QnA.RemoveAt(currentQuestion);
         StartCoroutine(WaitForNext());
-
     }
+
+
 
     public void Wrong()
     {
         RemoveCurrentQuestion();
         StartCoroutine(WaitForNext());
     }
+
     IEnumerator WaitForNext()
     {
         yield return new WaitForSeconds(1);
@@ -64,7 +60,7 @@ public class QuizManager : MonoBehaviour
     }
 
     void RemoveCurrentQuestion()
-    {
+    { 
         if (QnA.Count > 0)
         {
             QnA.RemoveAt(currentQuestion);
@@ -74,34 +70,36 @@ public class QuizManager : MonoBehaviour
         {
             generateQuestion();
         }
+
         else
         {
             GameOver();
         }
     }
-
     void SetAnswer()
-    {
+
+    { 
         if (QnA.Count == 0)
-        {
+        { 
             GameOver();
             return;
         }
 
-        // Prevent array index out of bounds error
-        if (QnA[currentQuestion].Answers.Length != options.Length)
+        // Prevent array index out of bounds error
+        if (QnA[currentQuestion].Answers.Length != options.Length)
         {
             Debug.LogError("Mismatch between answer choices and UI options. Check your data!");
             return;
         }
 
         for (int i = 0; i < options.Length; i++)
-        {
 
+        {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];
 
             if (QnA[currentQuestion].CorrectAnswer == i + 1)
+
             {
                 options[i].GetComponent<AnswerScript>().isCorrect = true;
             }
@@ -116,6 +114,7 @@ public class QuizManager : MonoBehaviour
             QuestionTxt.text = QnA[currentQuestion].Question;
             SetAnswer();
         }
+
         else
         {
             Debug.Log("No more questions available.");
