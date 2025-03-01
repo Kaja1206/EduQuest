@@ -68,7 +68,6 @@ public class QuizManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delayBetweenQuestions);
 
-        // Reset button colors
         foreach (GameObject option in options)
         {
             option.GetComponent<AnswerScript>().ResetButtonColor();
