@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class QuizManager : MonoBehaviour
 {
     public List<QuestionsAnswers> QnA;
     public GameObject[] options;
-    private int currentQuestion;
+    public int currentQuestion;
 
     public GameObject QuizPanel;
     public GameObject GoPanel;
@@ -16,8 +17,8 @@ public class QuizManager : MonoBehaviour
     public Text QuestionTxt;
     public Text ScoreTxt;
 
-    private int totalQuestions = 0;
-    private int score = 0;
+    int totalQuestions = 0;
+    public int score = 0;
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class QuizManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    private void GameOver()
+    void GameOver()
     {
         QuizPanel.SetActive(false);
         GoPanel.SetActive(true);
@@ -40,58 +41,33 @@ public class QuizManager : MonoBehaviour
 
     public void Correct()
     {
-        score++;
-        RemoveCurrentQuestion();
+        score += 1;
+        QnA.RemoveAt(currentQuestion);
+        StartCoroutine(WaitForNext());
     }
 
     public void Wrong()
     {
+        QnA.RemoveAt(currentQuestion);
         StartCoroutine(WaitForNext());
     }
 
     IEnumerator WaitForNext()
     {
         yield return new WaitForSeconds(1);
-        RemoveCurrentQuestion();
-    }
-
-    private void RemoveCurrentQuestion()
-    {
-        if (QnA.Count > 0)
-        {
-            QnA.RemoveAt(currentQuestion);
-        }
-
-        if (QnA.Count > 0)
-        {
-            generateQuestion();
-        }
-        else
-        {
-            GameOver();
-        }
+        generateQuestion();
     }
 
     private void SetAnswer()
     {
-        if (QnA.Count == 0)
-        {
-            GameOver();
-            return;
-        }
-
-        if (QnA[currentQuestion].Answers.Length < options.Length)
-        {
-            Debug.LogError("Not enough answers provided for the available UI options. Check your data!");
-            return;
-        }
-
         for (int i = 0; i < options.Length; i++)
         {
+            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor ;
             options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];
 
-            if (QnA[currentQuestion].CorrectAnswer == i)
+
+            if (QnA[currentQuestion].CorrectAnswer == i+1)
             {
                 options[i].GetComponent<AnswerScript>().isCorrect = true;
             }
@@ -103,12 +79,15 @@ public class QuizManager : MonoBehaviour
         if (QnA.Count > 0)
         {
             currentQuestion = Random.Range(0, QnA.Count);
+
             QuestionTxt.text = QnA[currentQuestion].Question;
             SetAnswer();
         }
         else
         {
+            Debug.Log("Out of Questions");
             GameOver();
         }
+       
     }
 }

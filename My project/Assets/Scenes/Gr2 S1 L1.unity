@@ -393,7 +393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 302976937}
 --- !u!114 &111218050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,7 +1006,7 @@ MonoBehaviour:
   - {fileID: 1867663631}
   - {fileID: 111218047}
   - {fileID: 1014673168}
-  Quizpanel: {fileID: 1668116571}
+  QuizPanel: {fileID: 1668116571}
   GoPanel: {fileID: 32317162}
   QuestionTxt: {fileID: 2130109785}
   ScoreTxt: {fileID: 1419004574}
@@ -2611,7 +2610,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 302976937}
 --- !u!114 &1014673171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3107,7 +3105,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 302976937}
         m_TargetAssemblyTypeName: QuizManager, Assembly-CSharp
         m_MethodName: retry
         m_Mode: 1
@@ -4658,7 +4656,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 302976937}
 --- !u!114 &1739916057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4920,7 +4917,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 302976937}
 --- !u!114 &1867663634
 MonoBehaviour:
   m_ObjectHideFlags: 0
