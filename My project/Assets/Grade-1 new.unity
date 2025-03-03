@@ -225,7 +225,7 @@ MonoBehaviour:
   - {fileID: 1731972495}
   - {fileID: 43670738}
   currentQuestion: 0
-  Quizpanel: {fileID: 2067492346}
+  QuizPanel: {fileID: 985136400}
   GoPanel: {fileID: 1275359564}
   QuestionTxt: {fileID: 1575392146}
   ScoreTxt: {fileID: 579203594}
@@ -959,8 +959,6 @@ GameObject:
   - component: {fileID: 383896459}
   - component: {fileID: 383896458}
   - component: {fileID: 383896463}
-  - component: {fileID: 383896462}
-  - component: {fileID: 383896461}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1043,36 +1041,6 @@ Transform:
   - {fileID: 1957724405}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &383896461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383896457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b46cf1ec476080d47a8c1b2eb83b0c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCorrect: 0
-  quizManager: {fileID: 0}
-  startColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!114 &383896462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383896457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b46cf1ec476080d47a8c1b2eb83b0c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCorrect: 0
-  quizManager: {fileID: 0}
-  startColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &383896463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,7 +1056,7 @@ MonoBehaviour:
   QnA: []
   options: []
   currentQuestion: 0
-  Quizpanel: {fileID: 0}
+  QuizPanel: {fileID: 0}
   GoPanel: {fileID: 0}
   QuestionTxt: {fileID: 0}
   ScoreTxt: {fileID: 0}
@@ -3436,11 +3404,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2067492347}
-  - {fileID: 1275359565}
   - {fileID: 1992889422}
   - {fileID: 1055639926}
   - {fileID: 528101197}
   - {fileID: 1355794553}
+  - {fileID: 1275359565}
   m_Father: {fileID: 383896460}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
