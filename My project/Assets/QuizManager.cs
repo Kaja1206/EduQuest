@@ -10,7 +10,7 @@ public class QuizManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
 
-    public GameObject Quizpanel;
+    public GameObject QuizPanel;
     public GameObject GoPanel;
 
     public Text QuestionTxt;
@@ -33,29 +33,41 @@ public class QuizManager : MonoBehaviour
 
     void GameOver()
     {
-        Quizpanel.SetActive(false);
+        QuizPanel.SetActive(false);
         GoPanel.SetActive(true);
         ScoreTxt.text = score + "/" + totalQuestions;
     }
-
     public void Correct()
     {
         score += 1;
-        QnA.RemoveAt(currentQuestion);
-        StartCoroutine(WaitForNext());
+        if (QnA.Count > 0)
+        {
+            QnA.RemoveAt(currentQuestion);
+            if(currentQuestion >= QnA.Count && QnA.Count > 0)
+            {
+                currentQuestion = QnA.Count - 1;
+            }
+            StartCoroutine(WaitForNext());
+        }
     }
-
-
 
     public void Wrong()
     {
-        RemoveCurrentQuestion();
+        if (QnA.Count > 0)
+        {
+            QnA.RemoveAt(currentQuestion);
+            if(currentQuestion >= QnA.Count && QnA.Count > 0)
+            {
+                currentQuestion = QnA.Count - 1;
+            }
+        }
         StartCoroutine(WaitForNext());
     }
 
     IEnumerator WaitForNext()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
+        ResetButtonColors();
         generateQuestion();
     }
 
@@ -66,21 +78,19 @@ public class QuizManager : MonoBehaviour
             QnA.RemoveAt(currentQuestion);
         }
 
-        if (QnA.Count > 0)
+        if (QnA.Count > 0) 
         {
             generateQuestion();
         }
-
         else
         {
             GameOver();
         }
     }
     void SetAnswer()
-
-    { 
+    {
         if (QnA.Count == 0)
-        { 
+        {
             GameOver();
             return;
         }
@@ -93,18 +103,22 @@ public class QuizManager : MonoBehaviour
         }
 
         for (int i = 0; i < options.Length; i++)
+        {
+            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor;
+        }
 
+        for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];
 
             if (QnA[currentQuestion].CorrectAnswer == i + 1)
-
             {
                 options[i].GetComponent<AnswerScript>().isCorrect = true;
             }
         }
     }
+
 
     void generateQuestion()
     {
@@ -119,6 +133,14 @@ public class QuizManager : MonoBehaviour
         {
             Debug.Log("No more questions available.");
             GameOver();
+        }
+    }
+
+    void ResetButtonColors()
+    {
+        for (int i = 0; i < options.Length; i++)
+        {
+            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor;
         }
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,8 +9,15 @@ public class AnswerScript : MonoBehaviour
 
     private void Start()
     {
-        startColor = GetComponent<Image>().color;
-
+        Image image = GetComponent<Image>();
+        if (image != null)
+        {
+            startColor = image.color;
+        }
+        else
+        {
+            Debug.LogError("Image component not found on " + gameObject.name);
+        }
     }
 
     public void Answer()
