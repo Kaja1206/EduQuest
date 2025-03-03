@@ -20,8 +20,6 @@ public class QuizManager : MonoBehaviour
     int totalQuestions = 0;
     public int score = 0;
 
-    AudioManager audioManager;
-
     private void Start()
     {
         totalQuestions = QnA.Count;
