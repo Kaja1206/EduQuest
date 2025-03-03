@@ -15,11 +15,16 @@ public class QuizManager : MonoBehaviour
 
     public Text QuestionTxt;
     public Text ScoreTxt;
+    public Text feedbackText;
 
     int totalQuestions = 0;
     public int score;
 
-    public float delayBetweenQuestions = 1f; // Delay before moving to the next question
+    public float delayBetweenQuestions = 0.5f;
+    public float feedbackDisplayTime = 0.5f;
+    public float feedbackAnimationDuration = 0.5f;
+
+    private string[] correctFeedbacks = new string[] { "Wow!", "Perfect!", "Correct!", "Excellent!", "Great job!" };
 
     AudioManager audioManager;
 
@@ -27,10 +32,15 @@ public class QuizManager : MonoBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
+
     private void Start()
     {
         totalQuestions = QnA.Count;
         GoPanel.SetActive(false);
+        if (feedbackText != null)
+        {
+            feedbackText.gameObject.SetActive(false);
+        }
         generateQuestion();
     }
 
@@ -55,18 +65,60 @@ public class QuizManager : MonoBehaviour
     {
         audioManager.PlaySFX(audioManager.correct);
         score += 1;
+        ShowFeedback(correctFeedbacks[Random.Range(0, correctFeedbacks.Length)], Color.green);
         StartCoroutine(DelayedNextQuestion());
     }
 
     public void wrong()
     {
         audioManager.PlaySFX(audioManager.wrong);
+        ShowFeedback("Try Again!", Color.red);
         StartCoroutine(DelayedNextQuestion());
+    }
+
+    private void ShowFeedback(string message, Color color)
+    {
+        if (feedbackText != null)
+        {
+            feedbackText.text = message;
+            feedbackText.color = color;
+            feedbackText.gameObject.SetActive(true);
+            StartCoroutine(AnimateFeedback());
+        }
+    }
+
+    private IEnumerator AnimateFeedback()
+    {
+        feedbackText.transform.localScale = Vector3.zero;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < feedbackAnimationDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float progress = elapsedTime / feedbackAnimationDuration;
+            feedbackText.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, Mathf.SmoothStep(0, 1, progress));
+            yield return null;
+        }
+
+        feedbackText.transform.localScale = Vector3.one;
+
+        yield return new WaitForSeconds(feedbackDisplayTime);
+
+        elapsedTime = 0f;
+        while (elapsedTime < feedbackAnimationDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float progress = elapsedTime / feedbackAnimationDuration;
+            feedbackText.transform.localScale = Vector3.Lerp(Vector3.one, Vector3.zero, Mathf.SmoothStep(0, 1, progress));
+            yield return null;
+        }
+
+        feedbackText.gameObject.SetActive(false);
     }
 
     IEnumerator DelayedNextQuestion()
     {
-        yield return new WaitForSeconds(delayBetweenQuestions);
+        yield return new WaitForSeconds(delayBetweenQuestions + feedbackAnimationDuration + feedbackDisplayTime);
 
         foreach (GameObject option in options)
         {
@@ -109,4 +161,8 @@ public class QuizManager : MonoBehaviour
         }
     }
 }
+
+
+
+
 
