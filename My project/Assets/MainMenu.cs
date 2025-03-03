@@ -3,20 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu: MonoBehaviour
 {
-    public void playGame()
+    public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void GoToSettingsMenu()
-    {
-        SceneManager.LoadScene("Gr2 S1 L1");
-    }
-    public void GoToMainMenu()
-    {
-        SceneManager.LoadScene("Gr2 S1 L1");
-    }
+
     public void QuitGame()
     {
+        Debug.Log("QUIT!");
         Application.Quit();
     }
 
