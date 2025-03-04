@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/MainMenu.unity
+    path: Assets/Maths/MainMenu.unity
     guid: 3be4d81632ad1864b842427fc3fa3317
   - enabled: 1
-    path: Assets/Grade-1 new.unity
+    path: Assets/Maths/Maths.unity
     guid: b6efa2b481c09f24391cf5c7dd6a79b2
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
