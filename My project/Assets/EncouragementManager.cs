@@ -15,12 +15,12 @@ public class EncouragementManager : MonoBehaviour
     {
         if (isCorrect)
         {
-            string[] correctMessages = { "Good job!", "Well done!", "Great work!", "Awesome!" };
+            string[] correctMessages = { "Good job!", "Well done!", "Great!", "Awesome!" };
             messageText.text = correctMessages[Random.Range(0, correctMessages.Length)];
         }
         else
         {
-            string[] wrongMessages = { "Don't give up!", "Try again!", "You can do it!", "Keep going!" };
+            string[] wrongMessages = { "Don't give up!", "Try again!", "You can!", "Keep going!" };
             messageText.text = wrongMessages[Random.Range(0, wrongMessages.Length)];
         }
 
