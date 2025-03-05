@@ -14,5 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Maths/Maths.unity
     guid: b6efa2b481c09f24391cf5c7dd6a79b2
+  - enabled: 1
+    path: Assets/English/EnglishMenu.unity
+    guid: bde51c4c87551834189301f6bc7f84b8
+  - enabled: 1
+    path: Assets/English/English.unity
+    guid: dff94cd8978c0be4481de260845287e9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
