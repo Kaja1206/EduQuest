@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 
+
 public class QuizManager : MonoBehaviour
 {
     public List<QuestionsAnswers> QnA;
@@ -30,6 +31,7 @@ public class QuizManager : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     void GameOver()
