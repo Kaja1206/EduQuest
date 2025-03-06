@@ -79,3 +79,5 @@ crashlytics-build.properties
 
 # Ignore new Unity 2025 logs
 /[Ll]ogs/2025*
+
+.env
