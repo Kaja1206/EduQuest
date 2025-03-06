@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758bb0041b0669e4d8da48afbec77b77, type: 3}
+  m_Name: Fruits
+  m_EditorClassIdentifier: 
+  category: Fruits
+  questions:
+  - questionText: Which fruit is this?
+    replies:
+    - Orange
+    - Banana
+    - Apple
+    - Mango
+    correctReplyIndex: 2
+    questionImage: {fileID: 7293598183456022363, guid: 3bb1baeba17c21d4282236b121bfd11e,
+      type: 3}
+  - questionText: Which fruit is this?
+    replies:
+    - Mango
+    - Orange
+    - Pineapple
+    - Watermelon
+    correctReplyIndex: 1
+    questionImage: {fileID: -3968840770022985357, guid: 353a7da59e5cf274186c6a81ddcd564a,
+      type: 3}
