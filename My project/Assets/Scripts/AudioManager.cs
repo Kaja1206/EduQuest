@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager instance;
+
     [Header("---------- Audio Source ----------")]
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioSource SFXSource;
@@ -16,7 +18,27 @@ public class AudioManager : MonoBehaviour
     [Header("---------- Volume Control ----------")]
     [SerializeField] Slider volumeSlider;
 
+    private void Awake()
+    {
+        // Singleton pattern to ensure only one AudioManager exists
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
     private void Start()
+    {
+        InitializeAudio();
+    }
+
+    private void InitializeAudio()
     {
         // Set up background music
         audioSource.clip = background;
@@ -24,8 +46,7 @@ public class AudioManager : MonoBehaviour
 
         // Load saved volume settings
         float savedVolume = PlayerPrefs.GetFloat("GameVolume", 1f);
-        audioSource.volume = savedVolume;
-        SFXSource.volume = savedVolume;
+        SetVolume(savedVolume);
 
         // Initialize volume slider
         if (volumeSlider != null)
@@ -55,7 +76,18 @@ public class AudioManager : MonoBehaviour
 
         Debug.Log("Volume set to: " + volume);
     }
+
+    // Call this method when entering a new scene
+    public void UpdateVolumeSlider()
+    {
+        if (volumeSlider != null)
+        {
+            volumeSlider.value = PlayerPrefs.GetFloat("GameVolume", 1f);
+        }
+    }
 }
+
+
 
 
 

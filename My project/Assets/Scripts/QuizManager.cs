@@ -161,8 +161,3 @@ public class QuizManager : MonoBehaviour
         }
     }
 }
-
-
-
-
-
