@@ -13,6 +13,10 @@ public class QuizManager : MonoBehaviour
     public GameObject QuizPanel;
     public GameObject GoPanel;
 
+    public GameObject FeedbackPanel;
+    public Text FeedbackText;
+    public float feedbackDisplayTime = 2f;
+
     public Text QuestionTxt;
     public Text ScoreTxt;
 
@@ -23,6 +27,7 @@ public class QuizManager : MonoBehaviour
     {
         totalQuestions = QnA.Count;
         GoPanel.SetActive(false);
+        FeedbackPanel.SetActive(false);
         generateQuestion();
     }
 
@@ -40,46 +45,34 @@ public class QuizManager : MonoBehaviour
     public void Correct()
     {
         score += 1;
-        if (QnA.Count > 0)
-        {
-            QnA.RemoveAt(currentQuestion);
-            if(currentQuestion >= QnA.Count && QnA.Count > 0)
-            {
-                currentQuestion = QnA.Count - 1;
-            }
-            StartCoroutine(WaitForNext());
-        }
+        ShowFeedback("Well done!", Color.green);
     }
 
     public void Wrong()
     {
+        ShowFeedback("Oh, That's incorrect", Color.red);
+    }
+    
+    void ShowFeedback(string message, Color color)
+    {
+        FeedbackText.text = message;
+        FeedbackText.color = color;
+        FeedbackPanel.SetActive(true);
+        StartCoroutine(HideFeedbackAndnext());
+    }
+
+    IEnumerator HideFeedbackAndnext()
+    {
+        yield return new WaitForSeconds(feedbackDisplayTime);
+        FeedbackPanel.SetActive(false);
+
         if (QnA.Count > 0)
         {
             QnA.RemoveAt(currentQuestion);
-            if(currentQuestion >= QnA.Count && QnA.Count > 0)
+            if (currentQuestion >= QnA.Count && QnA.Count > 0)
             {
                 currentQuestion = QnA.Count - 1;
             }
-        }
-        StartCoroutine(WaitForNext());
-    }
-
-    IEnumerator WaitForNext()
-    {
-        yield return new WaitForSeconds(2);
-        ResetButtonColors();
-        generateQuestion();
-    }
-
-    void RemoveCurrentQuestion()
-    { 
-        if (QnA.Count > 0)
-        {
-            QnA.RemoveAt(currentQuestion);
-        }
-
-        if (QnA.Count > 0) 
-        {
             generateQuestion();
         }
         else
@@ -87,6 +80,7 @@ public class QuizManager : MonoBehaviour
             GameOver();
         }
     }
+
     void SetAnswer()
     {
         if (QnA.Count == 0)
