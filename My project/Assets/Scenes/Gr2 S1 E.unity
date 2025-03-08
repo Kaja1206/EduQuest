@@ -393,14 +393,14 @@ MonoBehaviour:
     - A , L
     CorrectAnswer: 4
   options:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1068079589}
+  - {fileID: 2081166611}
+  - {fileID: 427412303}
+  - {fileID: 740669256}
   currentQuestion: 0
-  QuizPanel: {fileID: 0}
+  QuizPanel: {fileID: 1300286739}
   GoPanel: {fileID: 671940926}
-  QuestionTxt: {fileID: 0}
+  QuestionTxt: {fileID: 1371872798}
   ScoreTxt: {fileID: 2070186381}
   score: 0
 --- !u!4 &139291512
@@ -600,8 +600,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 204.11987, y: -278.62}
-  m_SizeDelta: {x: 527.24, y: 411.24}
+  m_AnchoredPosition: {x: 205.39297, y: -267.07}
+  m_SizeDelta: {x: 576.622, y: 542.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427412305
 MonoBehaviour:
@@ -631,8 +631,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 0}
-  startColor: {r: 0.25490198, g: 0.26666668, b: 0.26666668, a: 1}
+  quizManager: {fileID: 139291511}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &427412307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageText: {fileID: 1225530978}
-  messageDuration: 2
+  messageDuration: 1
 --- !u!4 &716395686
 Transform:
   m_ObjectHideFlags: 0
@@ -1146,8 +1146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 699.0794, y: -278.62}
-  m_SizeDelta: {x: 545, y: 411.24}
+  m_AnchoredPosition: {x: 746.712, y: -267.07}
+  m_SizeDelta: {x: 596.046, y: 542.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &740669258
 MonoBehaviour:
@@ -1177,8 +1177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 0}
-  startColor: {r: 0.25490198, g: 0.26666668, b: 0.26666668, a: 1}
+  quizManager: {fileID: 139291511}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &740669260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1972,8 +1972,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -717, y: -268}
-  m_SizeDelta: {x: 595.321, y: 432.482}
+  m_AnchoredPosition: {x: -802, y: -256}
+  m_SizeDelta: {x: 651.079, y: 564.284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068079591
 MonoBehaviour:
@@ -2003,8 +2003,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 0}
-  startColor: {r: 0.25490198, g: 0.26666668, b: 0.26666668, a: 1}
+  quizManager: {fileID: 139291511}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1068079593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2324,6 +2324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1136919314}
+  - component: {fileID: 1136919315}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Audio
@@ -2348,6 +2349,23 @@ Transform:
   - {fileID: 1677607217}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1136919315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136919312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca703dba261c5244cb3ad668107cb11c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 131572343}
+  SFXSource: {fileID: 1677607216}
+  background: {fileID: 8300000, guid: ff0aa09c64b595b4396506c098835c5d, type: 3}
+  correct: {fileID: 8300000, guid: 7aab6cdaf0846184abd24fedb0302f8b, type: 3}
+  wrong: {fileID: 8300000, guid: ca2a962722fd5834895fc28890636502, type: 3}
 --- !u!1 &1222349787
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,8 +2400,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26.999992, y: -80.000015}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 29.165, y: -103.51001}
+  m_SizeDelta: {x: -1.394, y: -73.005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222349789
 MonoBehaviour:
@@ -2608,14 +2626,14 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281201379
+  m_fontColor: {r: 0.8891159, g: 0.94716984, b: 0.17692411, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 0, g: 0.9943373, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 0, g: 0, b: 0, a: 1}
+    bottomLeft: {r: 0.25283727, g: 0.5018867, b: 0.49135682, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
@@ -2626,8 +2644,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 250
+  m_fontSizeBase: 250
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2708,8 +2726,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 65}
-  m_SizeDelta: {x: 791.914, y: 379.525}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1242.589, y: 468.612}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1263555642
 GameObject:
@@ -3019,8 +3037,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 21.999992, y: -70.000015}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 22.868, y: -94.85602}
+  m_SizeDelta: {x: -1.441, y: -73.005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1332051277
 MonoBehaviour:
@@ -4093,8 +4111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 27, y: -80}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 31.6, y: -105}
+  m_SizeDelta: {x: -1.574, y: -75.986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759314948
 MonoBehaviour:
@@ -4664,8 +4682,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -251, y: -281.62}
-  m_SizeDelta: {x: 559.8, y: 417.24}
+  m_AnchoredPosition: {x: -294.99997, y: -267.07}
+  m_SizeDelta: {x: 612.231, y: 542.14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2081166613
 MonoBehaviour:
@@ -4695,8 +4713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCorrect: 0
-  quizManager: {fileID: 0}
-  startColor: {r: 0.25490198, g: 0.26666668, b: 0.26666668, a: 1}
+  quizManager: {fileID: 139291511}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2081166615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4825,8 +4843,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26.999992, y: -80.000015}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 30.375, y: -103.51001}
+  m_SizeDelta: {x: -1.48, y: -73.004}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098360848
 MonoBehaviour:

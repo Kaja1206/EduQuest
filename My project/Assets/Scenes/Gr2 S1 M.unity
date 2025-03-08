@@ -382,7 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 842284620}
-  startColor: {r: 0.25490198, g: 0.26666668, b: 0.26666668, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &96580035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -782,8 +782,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21.698017, y: 14.56}
-  m_SizeDelta: {x: 748.52, y: 711.695}
+  m_AnchoredPosition: {x: 17.768, y: 0.149}
+  m_SizeDelta: {x: 861.189, y: 740.517}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &336370602
 GameObject:
@@ -1580,7 +1580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 842284620}
-  startColor: {r: 0.25490198, g: 0.26666668, b: 0.26666668, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &609901396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 1}
+  m_Color: {r: 0.6301887, g: 0.59808475, b: 0.59808475, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3770,7 +3770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 842284620}
-  startColor: {r: 0.25490198, g: 0.26666668, b: 0.26666668, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1506530678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4312,7 +4312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b614a3b8cc43cd74f8028d5de0224fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 0}
+  volumeSlider: {fileID: 594980267}
 --- !u!114 &1653647947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4741,7 +4741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   quizManager: {fileID: 842284620}
-  startColor: {r: 0.25490198, g: 0.26666668, b: 0.26666668, a: 1}
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1910944269
 MonoBehaviour:
   m_ObjectHideFlags: 0
