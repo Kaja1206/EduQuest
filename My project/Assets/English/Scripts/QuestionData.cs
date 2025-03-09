@@ -17,4 +17,3 @@ public class QuestionData : ScriptableObject
     public string category;
     public Question[] questions;
 }
-

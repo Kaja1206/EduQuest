@@ -9,15 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/English/Scenes/Menu.unity
+    guid: 1de0388008430b54b91869b4853e4f52
+  - enabled: 1
+    path: Assets/English/Scenes/Category.unity
+    guid: 68984fcd831faff4aa7ba0d492c1bd01
+  - enabled: 1
+    path: Assets/English/Scenes/English 1.unity
+    guid: ba809f9dfa3d1ce4aaed990f602b2f2f
+  - enabled: 0
     path: Assets/Maths/MainMenu.unity
     guid: 3be4d81632ad1864b842427fc3fa3317
-  - enabled: 1
+  - enabled: 0
     path: Assets/Maths/Maths.unity
     guid: b6efa2b481c09f24391cf5c7dd6a79b2
-  - enabled: 1
+  - enabled: 0
     path: Assets/English/EnglishMenu.unity
     guid: bde51c4c87551834189301f6bc7f84b8
-  - enabled: 1
+  - enabled: 0
     path: Assets/English/English.unity
     guid: dff94cd8978c0be4481de260845287e9
   m_configObjects: {}
