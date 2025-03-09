@@ -3,26 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
+using TMPro;
 
 public class QuizManager1 : MonoBehaviour
 {
-    public List<QuestionsAnswers> QnA;
-    public GameObject[] options;
-    public int currentQuestion;
+    public List<QuestionsAnswers> easyQuestions;
+    public List<QuestionsAnswers> mediumQuestions;
+    public List<QuestionsAnswers> hardQuestions;
 
+    private List<QuestionsAnswers> currentQuestionPool;
+    private List<QuestionsAnswers> usedQuestions = new List<QuestionsAnswers>();
+
+    public GameObject[] options;
     public GameObject QuizPanel;
     public GameObject GoPanel;
-    public Text QuestionTxt;
+    public TMP_Text QuestionTxt;
+    public Image QuestionImage; // Assuming you want to display the question image
     public Text ScoreTxt;
-    public Image QuestionImage; // ✅ Reference to UI Image
 
-    int totalQuestions = 0;
+    private int questionCount = 0;  // Track number of questions asked
     public int score = 0;
+    private const int maxQuestions = 5;  // Limit total questions
 
     private void Start()
     {
-        totalQuestions = QnA.Count;
+        currentQuestionPool = easyQuestions;  // Start with easy questions
         GoPanel.SetActive(false);
         generateQuestion();
     }
@@ -36,57 +41,104 @@ public class QuizManager1 : MonoBehaviour
     {
         QuizPanel.SetActive(false);
         GoPanel.SetActive(true);
-        ScoreTxt.text = score + "/" + totalQuestions;
+        ScoreTxt.text = score + "/" + maxQuestions;
     }
 
     public void Correct()
     {
         score += 1;
-        QnA.RemoveAt(currentQuestion);
+        AdjustDifficulty(true);
         StartCoroutine(WaitForNext());
     }
 
     public void Wrong()
     {
-        QnA.RemoveAt(currentQuestion);
+        AdjustDifficulty(false);
         StartCoroutine(WaitForNext());
     }
 
     IEnumerator WaitForNext()
     {
-        yield return new WaitForSeconds(1);
-        generateQuestion();
+        yield return new WaitForSeconds(1); // Wait for 1 second before showing the next question
+        generateQuestion(); // Call to generate the next question
     }
 
-    private void SetAnswer()
+    private void SetAnswer(QuestionsAnswers selectedQuestion)
     {
         for (int i = 0; i < options.Length; i++)
         {
-            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor;
-            options[i].GetComponent<AnswerScript>().isCorrect = false;
-            options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];
+            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript1>().startColor;
+            options[i].GetComponent<AnswerScript1>().isCorrect = false;
 
-            if (QnA[currentQuestion].CorrectAnswer == i + 1)
+            // Set answer text correctly
+            options[i].transform.GetChild(0).GetComponent<Text>().text = selectedQuestion.Answers[i];
+
+            // Mark correct answer
+            if (selectedQuestion.CorrectAnswer == i + 1)
             {
-                options[i].GetComponent<AnswerScript>().isCorrect = true;
+                options[i].GetComponent<AnswerScript1>().isCorrect = true;
             }
         }
     }
 
     private void generateQuestion()
     {
-        if (QnA.Count > 0)
+        if (questionCount >= maxQuestions)
         {
-            currentQuestion = Random.Range(0, QnA.Count);
+            GameOver();
+            return;
+        }
 
-            QuestionTxt.text = QnA[currentQuestion].Question;
-            QuestionImage.sprite = QnA[currentQuestion].QuestionImage; // ✅ Set image
-            SetAnswer();
+        // Check if there are remaining questions in the current pool
+        if (currentQuestionPool.Count > 0)
+        {
+            // Pick a random question and remove it from the pool
+            int randomIndex = Random.Range(0, currentQuestionPool.Count);
+            QuestionsAnswers selectedQuestion = currentQuestionPool[randomIndex];
+            currentQuestionPool.RemoveAt(randomIndex);
+
+            usedQuestions.Add(selectedQuestion);  // Store the used question
+            QuestionTxt.text = selectedQuestion.Question;
+            QuestionImage.sprite = selectedQuestion.QuestionImage; // Display question image
+
+            SetAnswer(selectedQuestion);  // Pass the correct question
+
+            questionCount++;  // Increment question count
         }
         else
         {
-            Debug.Log("Out of Questions");
-            GameOver();
+            GameOver(); // If there are no questions left, end the game
+        }
+    }
+
+    private void AdjustDifficulty(bool isCorrect)
+    {
+        if (isCorrect)
+        {
+            // Adjust difficulty logic
+            if (currentQuestionPool == easyQuestions)
+            {
+                currentQuestionPool = mediumQuestions; // Move to Medium
+            }
+            else if (currentQuestionPool == mediumQuestions)
+            {
+                currentQuestionPool = hardQuestions; // Move to Hard
+            }
+            // If already in Hard, stay in Hard
+        }
+        else
+        {
+            // Adjust difficulty logic when the answer is wrong
+            if (currentQuestionPool == hardQuestions)
+            {
+                currentQuestionPool = mediumQuestions; // Move to Medium (Not Easy!)
+            }
+            else if (currentQuestionPool == mediumQuestions)
+            {
+                currentQuestionPool = easyQuestions; // Move to Easy
+            }
+            // If already in Easy, stay in Easy
         }
     }
 }
+
