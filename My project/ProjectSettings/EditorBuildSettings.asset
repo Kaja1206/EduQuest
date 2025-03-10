@@ -18,10 +18,10 @@ EditorBuildSettings:
     path: Assets/English/Scenes/English 1.unity
     guid: ba809f9dfa3d1ce4aaed990f602b2f2f
   - enabled: 0
-    path: Assets/Maths/MainMenu.unity
+    path: Assets/Maths/Adding/MainMenu.unity
     guid: 3be4d81632ad1864b842427fc3fa3317
   - enabled: 0
-    path: Assets/Maths/Maths.unity
+    path: Assets/Maths/Adding/Maths.unity
     guid: b6efa2b481c09f24391cf5c7dd6a79b2
   - enabled: 0
     path: Assets/English/EnglishMenu.unity

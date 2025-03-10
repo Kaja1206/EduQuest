@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 758bb0041b0669e4d8da48afbec77b77, type: 3}
+  m_Name: Counting
+  m_EditorClassIdentifier: 
+  category: CountingQuestionData
+  questions:
+  - questionText: How many balls are here?
+    replies:
+    - 5
+    - 8
+    - 4
+    - 3
+    correctReplyIndex: 2
+    questionImage: {fileID: 6606447940880435433, guid: a5ab28dfaa06c2d42905e2efdda6079b,
+      type: 3}
+  - questionText: How many bats are there?
+    replies:
+    - 4
+    - 3
+    - 5
+    - 6
+    correctReplyIndex: 1
+    questionImage: {fileID: -2048251983285237723, guid: 752e58231adac6540b129f688a23ec4f,
+      type: 3}
+  - questionText: How many apples are there?
+    replies:
+    - 4
+    - 3
+    - 6
+    - 7
+    correctReplyIndex: 1
+    questionImage: {fileID: 4978424162507891905, guid: baf3444cdf32099438592fe64303ea5d,
+      type: 3}
