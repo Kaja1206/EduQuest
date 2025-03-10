@@ -76,29 +76,32 @@ public class QuestionPanel : MonoBehaviour
         // Calculate the response time
         float responseTime = Time.time - startTime;
 
-        // Determine the difficulty of the next question based on response time
-        if (responseTime <= 10f)
-        {
-            // Player answered quickly, increase difficulty
-            nextQuestionDifficulty = Mathf.Min(3, nextQuestionDifficulty + 1); // Cap at 3 (hard)
-        }
-        else
-        {
-            // Player answered slowly, decrease difficulty
-            nextQuestionDifficulty = Mathf.Max(1, nextQuestionDifficulty - 1); // Cap at 1 (easy)
-        }
-
         if (selectedIndex == currentQuestion.correctAnswerIndex)
         {
             // Correct answer
             correctAnswerPanel.SetActive(true);
             wrongAnswerPanel.SetActive(false);
+
+            // Determine the difficulty of the next question based on response time
+            if (responseTime <= 10f)
+            {
+                // Player answered quickly, increase difficulty
+                nextQuestionDifficulty = Mathf.Min(3, nextQuestionDifficulty + 1); // Cap at 3 (hard)
+            }
+            else
+            {
+                // Player answered slowly, keep difficulty same or decrease
+                nextQuestionDifficulty = Mathf.Clamp(nextQuestionDifficulty, 1, 3); // Ensure within 1 to 3
+            }
         }
         else
         {
             // Wrong answer
             wrongAnswerPanel.SetActive(true);
             correctAnswerPanel.SetActive(false);
+
+            // Decrease difficulty for the next question
+            nextQuestionDifficulty = Mathf.Max(1, nextQuestionDifficulty - 1); // Ensure it doesn't go below 1 (easy)
         }
     }
 
@@ -111,8 +114,5 @@ public class QuestionPanel : MonoBehaviour
 
         // Resume the game
         Time.timeScale = 1;
-
-        // Load the next question (if needed)
-        LoadQuestion();
     }
 }

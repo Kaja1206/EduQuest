@@ -50,6 +50,10 @@ public class PlayerManage : MonoBehaviour
         PlayerPrefs.DeleteKey("CheckpointCoins");
         PlayerPrefs.SetInt("NoOfCoins", NoOfCoins);
         lastCP = new Vector2(-11, -3); // Reset checkpoint to initial position
+
+        // Clear all checkpoint activation states
+        ClearCheckpointData();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -74,8 +78,22 @@ public class PlayerManage : MonoBehaviour
         PlayerPrefs.DeleteKey("CheckpointCoins");
         PlayerPrefs.SetInt("NoOfCoins", NoOfCoins);
         lastCP = new Vector2(-11, -3); // Reset checkpoint position to the initial position or any default position
+
+        // Clear all checkpoint activation states
+        ClearCheckpointData();
+
         SceneManager.LoadScene("Menu");
         AudioListener.pause = false;
+    }
+
+    private void ClearCheckpointData()
+    {
+        // Find all checkpoints in the scene and clear their activation states
+        GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");
+        foreach (GameObject checkpoint in checkpoints)
+        {
+            PlayerPrefs.DeleteKey("CheckpointActivated_" + checkpoint.name);
+        }
     }
 
     private void OnApplicationQuit()
@@ -84,6 +102,9 @@ public class PlayerManage : MonoBehaviour
         NoOfCoins = 0;
         PlayerPrefs.SetInt("NoOfCoins", NoOfCoins);
         PlayerPrefs.DeleteKey("CheckpointCoins");
+
+        // Clear all checkpoint activation states
+        ClearCheckpointData();
     }
 
     private void OnDestroy()

@@ -36,6 +36,12 @@ public class QuestionManager : MonoBehaviour
 
     public Question GetRandomQuestion()
     {
+        if (availableQuestions.Count == 0)
+        {
+            // Refill the available questions list
+            availableQuestions = new List<Question>(questions);
+        }
+
         if (availableQuestions.Count > 0)
         {
             // Get a random question from the available questions
