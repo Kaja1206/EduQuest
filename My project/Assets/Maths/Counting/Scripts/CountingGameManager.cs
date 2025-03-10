@@ -37,7 +37,7 @@ public class CountingGameManager : MonoBehaviour
     {
         selectedCategory = categories[categoryIndex];
         currentQuestionIndex = 0;
-        correctReplies = 0; //reset correct replies when a category is selected.
+        correctReplies = 0;
         DisplayQuestion();
     }
 

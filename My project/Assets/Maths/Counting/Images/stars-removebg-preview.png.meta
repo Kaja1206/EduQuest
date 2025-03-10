@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 752e58231adac6540b129f688a23ec4f
+guid: 315f5fa4be5837a448d8111e75845bf5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2048251983285237723
-    second: bats_0
+      213: 5142051254436797643
+    second: stars-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bats_0
+      name: stars-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 832
-        height: 448
+        x: 61
+        y: 72
+        width: 577
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5284bcd5ca52393e0800000000000000
-      internalID: -2048251983285237723
+      spriteID: bcc9e854f5c3c5740800000000000000
+      internalID: 5142051254436797643
       vertices: []
       indices: 
       edges: []

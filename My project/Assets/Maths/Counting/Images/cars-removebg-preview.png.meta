@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: baf3444cdf32099438592fe64303ea5d
+guid: 801cf29bf47ddc8419746fd743a18d99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4978424162507891905
-    second: apple1_0
+      213: -5958112176576452310
+    second: cars-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: apple1_0
+      name: cars-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 832
-        height: 448
+        x: 34
+        y: 64
+        width: 606
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c42183266ae61540800000000000000
-      internalID: 4978424162507891905
+      spriteID: a292b37fa88805da0800000000000000
+      internalID: -5958112176576452310
       vertices: []
       indices: 
       edges: []

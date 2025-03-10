@@ -30,7 +30,7 @@ MonoBehaviour:
     - 5
     - 6
     correctReplyIndex: 1
-    questionImage: {fileID: -2048251983285237723, guid: 752e58231adac6540b129f688a23ec4f,
+    questionImage: {fileID: -5455836813828466499, guid: bc577c2bd5e874343825fa0b51584a77,
       type: 3}
   - questionText: How many apples are there?
     replies:
@@ -38,6 +38,69 @@ MonoBehaviour:
     - 3
     - 6
     - 7
+    correctReplyIndex: 3
+    questionImage: {fileID: 4598170676624533274, guid: cc57ef9225cc7614095a03f0f1d75197,
+      type: 3}
+  - questionText: How many balloons are here?
+    replies:
+    - 5
+    - 4
+    - 3
+    - 2
+    correctReplyIndex: 2
+    questionImage: {fileID: 5738808026026955811, guid: 1823cbee4cf9e274d97beba98a993e8e,
+      type: 3}
+  - questionText: How many tree are here?
+    replies:
+    - 3
+    - 5
+    - 4
+    - 6
+    correctReplyIndex: 3
+    questionImage: {fileID: 3275993664820964430, guid: 4a2605ab6e8fd124da99181fbda692f4,
+      type: 3}
+  - questionText: How many big stars are here?
+    replies:
+    - 6
+    - 3
+    - 4
+    - 7
     correctReplyIndex: 1
-    questionImage: {fileID: 4978424162507891905, guid: baf3444cdf32099438592fe64303ea5d,
+    questionImage: {fileID: 5142051254436797643, guid: 315f5fa4be5837a448d8111e75845bf5,
+      type: 3}
+  - questionText: How many candies are here?
+    replies:
+    - 5
+    - 4
+    - 8
+    - 6
+    correctReplyIndex: 1
+    questionImage: {fileID: -1402486514000126413, guid: 92062e3d9813e3c4298b3bd39ba51d1b,
+      type: 3}
+  - questionText: How many Teddy bears are here?
+    replies:
+    - 0
+    - 3
+    - 4
+    - 5
+    correctReplyIndex: 1
+    questionImage: {fileID: 4250450077655185502, guid: 9149228d38ce0394dbaa24c5212028a6,
+      type: 3}
+  - questionText: How many birds are here?
+    replies:
+    - 5
+    - 3
+    - 2
+    - 4
+    correctReplyIndex: 3
+    questionImage: {fileID: 6985345755391978807, guid: 1096c82eee5199c47969b86525a6ca29,
+      type: 3}
+  - questionText: How many Cars are here?
+    replies:
+    - 4
+    - 3
+    - 2
+    - 5
+    correctReplyIndex: 3
+    questionImage: {fileID: -5958112176576452310, guid: 801cf29bf47ddc8419746fd743a18d99,
       type: 3}
