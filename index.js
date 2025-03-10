@@ -21,3 +21,10 @@ mongoose
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
   .catch((err) => console.log(err));
+
+
+const authRoutes = require("./routes/auth");
+const progressRoutes = require("./routes/progress");
+
+app.use("/auth", authRoutes);
+app.use("/progress", progressRoutes);
