@@ -142,9 +142,6 @@ public class QuizManager : MonoBehaviour
             // If already in Easy, stay in Easy
         }
     }
-
-
-
 }
 
 
