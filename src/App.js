@@ -5,7 +5,7 @@ import "./App.css";
 // Importing components
 import Home from "./components/Home";
 import Auth from "./components/Auth";
-
+import GameSelection from "./components/GameSelection";
 import Dashboard from "./components/Dashboard";
 import ParentalDashboard from "./components/ParentalDashboard";
 
@@ -32,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/games" element={<GameSelection />} />
           
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/parental-dashboard" element={<ParentalDashboard />} />
