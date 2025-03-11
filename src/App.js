@@ -8,18 +8,18 @@ import Auth from "./components/Auth";
 import GameSelection from "./components/GameSelection";
 import Dashboard from "./components/Dashboard";
 import ParentalDashboard from "./components/ParentalDashboard";
-import ContactUs from './components/ContactUs';
+
 
 
 import Achievements from "./components/Achivements";
-
+import Rewards from "./components/Rewards";
 
 
 
 
 import AccountIssues from './components/AccountIssues';
 
-
+import ContactUs from './components/ContactUs';
 
 
 
@@ -37,6 +37,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/parental-dashboard" element={<ParentalDashboard />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/rewards" element={<Rewards />} /> 
           
           
           <Route path="/achievements" element={<Achievements />} />
