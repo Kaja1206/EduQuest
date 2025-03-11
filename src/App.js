@@ -13,6 +13,7 @@ import ParentalDashboard from "./components/ParentalDashboard";
 
 import Achievements from "./components/Achivements";
 import Rewards from "./components/Rewards";
+import Progress from "./components/Progress";
 
 
 
@@ -38,7 +39,7 @@ function App() {
           <Route path="/parental-dashboard" element={<ParentalDashboard />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/rewards" element={<Rewards />} /> 
-          
+          <Route path="/progress" element={<Progress />} />
           
           <Route path="/achievements" element={<Achievements />} />
           
