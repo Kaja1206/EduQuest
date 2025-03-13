@@ -14,6 +14,7 @@ import ParentalDashboard from "./components/ParentalDashboard";
 import Achievements from "./components/Achivements";
 import Rewards from "./components/Rewards";
 import Progress from "./components/Progress";
+import Courses from "./components/Courses";
 
 
 
@@ -40,6 +41,7 @@ function App() {
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/rewards" element={<Rewards />} /> 
           <Route path="/progress" element={<Progress />} />
+          <Route path="/courses" element={<Courses />} />
           
           <Route path="/achievements" element={<Achievements />} />
           
