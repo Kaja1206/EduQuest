@@ -891,15 +891,15 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278255359
+  m_fontColor: {r: 1, g: 0.99764353, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 0, g: 0.9943373, b: 1, a: 1}
+    topLeft: {r: 0, g: 0, b: 0, a: 1}
+    topRight: {r: 1, g: 0.18969083, b: 0, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 0, b: 0, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -991,7 +991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -159.53, y: 121.05}
+  m_AnchoredPosition: {x: -144, y: 189.76}
   m_SizeDelta: {x: 791.914, y: 379.525}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &488470584
@@ -2977,9 +2977,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1409584711}
   SFXSource: {fileID: 1146742979}
-  background: {fileID: 8300000, guid: ff0aa09c64b595b4396506c098835c5d, type: 3}
-  correct: {fileID: 8300000, guid: 7aab6cdaf0846184abd24fedb0302f8b, type: 3}
-  wrong: {fileID: 8300000, guid: ca2a962722fd5834895fc28890636502, type: 3}
+  background: {fileID: 8300000, guid: cf5689508aa716d45bdfd9d83110779f, type: 3}
+  correct: {fileID: 8300000, guid: 88ccf16791315984bb8adc1e86ba51fc, type: 3}
+  wrong: {fileID: 8300000, guid: 9a883e4ffe73de54b8cb14ce90b0a767, type: 3}
 --- !u!4 &1172754979
 Transform:
   m_ObjectHideFlags: 0
@@ -3873,7 +3873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.058823526, g: 1, b: 0.9328093, a: 1}
+  m_Color: {r: 0.3166583, g: 0.08252757, b: 0.6528301, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

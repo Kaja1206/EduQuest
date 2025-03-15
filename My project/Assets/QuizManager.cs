@@ -82,6 +82,7 @@ public class QuizManager : MonoBehaviour
     }
 
 
+
     private void generateQuestion()
     {
         if (questionCount >= maxQuestions)

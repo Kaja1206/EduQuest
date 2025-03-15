@@ -1862,8 +1862,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.9949951, y: 2.0498047}
-  m_SizeDelta: {x: -478.1517, y: -125.45}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.00024414062}
+  m_SizeDelta: {x: -0.000061035, y: -0.00048828}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1435572850
 MonoBehaviour:
@@ -1893,7 +1893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.509434, g: 0.41146275, b: 0.13360623, a: 0.36862746}
+  m_Color: {r: 0.78113204, g: 0.6333113, b: 0.22844417, a: 0.21176471}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2228,8 +2228,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ceb818c5f54d1154c8d6916c85fa81c1, type: 3}
-  m_Resource: {fileID: 8300000, guid: ceb818c5f54d1154c8d6916c85fa81c1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 38065ef39ddade642ba18cfc4fde4449, type: 3}
+  m_Resource: {fileID: 8300000, guid: 38065ef39ddade642ba18cfc4fde4449, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
