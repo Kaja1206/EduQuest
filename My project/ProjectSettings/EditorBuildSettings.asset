@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Maths/Counting/Scences/Category.unity
     guid: 7c003ae15dce7874c86b28735e29bd31
   - enabled: 1
+    path: Assets/English/Scenes/Story.unity
+    guid: e5d816a7aa754c5489ad113ef2a3d647
+  - enabled: 1
     path: Assets/English/Scenes/Menu.unity
     guid: 1de0388008430b54b91869b4853e4f52
   - enabled: 1

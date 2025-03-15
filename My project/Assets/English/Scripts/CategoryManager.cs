@@ -10,5 +10,7 @@ public class CategoryManager : MonoBehaviour
         PlayerPrefs.SetInt("SelectedCategory", categoryIndex);
 
         SceneManager.LoadScene("English 1");
+
+        AudioManager.Instance.PlaySFX("Click");
     }
 }
