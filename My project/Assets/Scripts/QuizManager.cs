@@ -18,8 +18,8 @@ public class QuizManager : MonoBehaviour
     public Text QuestionTxt;
     public Text ScoreTxt;
     public Text feedbackText;
-    public Text difficultyText; // Optional: to display current difficulty
-    public Text timerText; // Optional: to display time taken
+    public Text difficultyText; 
+    public Text timerText; 
 
     [Header("Quiz Settings")]
     public int maxQuestions = 10;
@@ -62,10 +62,16 @@ public class QuizManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void LoadMainMenu()
+    public void Levels()
     {
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("LevelSelector");
     }
+
+    public void Level()
+    {
+        SceneManager.LoadScene("Syllabus");
+    }
+
 
     void GameOver()
     {
@@ -79,7 +85,7 @@ public class QuizManager : MonoBehaviour
         if (audioManager != null) audioManager.PlaySFX(audioManager.correct);
         score += 1;
 
-        // Adjust difficulty based on correct answer
+        
         AdjustDifficulty(true);
 
         ShowFeedback(correctFeedbacks[Random.Range(0, correctFeedbacks.Length)], Color.green);
@@ -90,10 +96,10 @@ public class QuizManager : MonoBehaviour
     {
         if (audioManager != null) audioManager.PlaySFX(audioManager.wrong);
 
-        // Adjust difficulty based on wrong answer
+        
         AdjustDifficulty(false);
 
-        ShowFeedback("Try Again!", Color.red);
+        ShowFeedback("Wrong!", Color.red);
         StartCoroutine(DelayedNextQuestion());
     }
 
@@ -106,10 +112,10 @@ public class QuizManager : MonoBehaviour
         if (currentQuestionPool == mediumQuestions) currentDifficulty = "Medium";
         if (currentQuestionPool == hardQuestions) currentDifficulty = "Hard";
 
-        string nextDifficulty = currentDifficulty; // Default: stay at same difficulty
+        string nextDifficulty = currentDifficulty; 
 
-        // Apply the detailed rules based on difficulty, correctness, and time
-        if (currentQuestionPool == easyQuestions) // EASY QUESTIONS
+        
+        if (currentQuestionPool == easyQuestions) 
         {
             if (isCorrect && isFast)
             {
@@ -118,12 +124,11 @@ public class QuizManager : MonoBehaviour
             }
             else
             {
-                // All other cases for Easy questions stay at Easy
                 nextDifficulty = "Easy";
                 currentQuestionPool = easyQuestions;
             }
         }
-        else if (currentQuestionPool == mediumQuestions) // MEDIUM QUESTIONS
+        else if (currentQuestionPool == mediumQuestions) 
         {
             if (isCorrect && isFast)
             {
@@ -132,12 +137,12 @@ public class QuizManager : MonoBehaviour
             }
             else
             {
-                // All other cases for Medium questions go to Easy
+               
                 nextDifficulty = "Easy";
                 currentQuestionPool = easyQuestions;
             }
         }
-        else if (currentQuestionPool == hardQuestions) // HARD QUESTIONS
+        else if (currentQuestionPool == hardQuestions) 
         {
             if (isCorrect && isFast)
             {
@@ -146,23 +151,22 @@ public class QuizManager : MonoBehaviour
             }
             else
             {
-                // All other cases for Hard questions go to Medium
                 nextDifficulty = "Medium";
                 currentQuestionPool = mediumQuestions;
             }
         }
 
-        // Log the difficulty change
+        
         Debug.Log($"Answer: {(isCorrect ? "Correct" : "Incorrect")}, Time: {timeTaken:F1}s ({(isFast ? "Fast" : "Slow")}), " +
                   $"Difficulty change: {currentDifficulty} ? {nextDifficulty}");
 
-        // Update difficulty text if available
+        
         if (difficultyText != null)
         {
             difficultyText.text = "Difficulty: " + nextDifficulty;
         }
 
-        // Update timer text if available
+        
         if (timerText != null)
         {
             timerText.text = $"Time: {timeTaken:F1}s";
@@ -247,24 +251,22 @@ public class QuizManager : MonoBehaviour
 
         if (currentQuestionPool.Count > 0)
         {
-            // Start timing for this question
             questionStartTime = Time.time;
 
-            // Select first question from the pool
             QuestionAndAnswers selectedQuestion = currentQuestionPool[0];
             currentQuestionPool.RemoveAt(0);
 
-            // Add to used questions
+            
             usedQuestions.Add(selectedQuestion);
 
-            // Display the question
+            
             QuestionTxt.text = selectedQuestion.Question;
             SetAnswers(selectedQuestion);
 
-            // Increment question count
+            
             questionCount++;
 
-            // Determine current difficulty name for logging
+            
             string difficultyName = "Easy";
             if (currentQuestionPool == mediumQuestions) difficultyName = "Medium";
             if (currentQuestionPool == hardQuestions) difficultyName = "Hard";
@@ -273,7 +275,7 @@ public class QuizManager : MonoBehaviour
         }
         else if (easyQuestions.Count > 0 || mediumQuestions.Count > 0 || hardQuestions.Count > 0)
         {
-            // If current pool is empty but others have questions, try another pool
+            
             if (currentQuestionPool == hardQuestions)
             {
                 currentQuestionPool = mediumQuestions;

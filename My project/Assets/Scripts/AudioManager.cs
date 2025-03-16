@@ -20,7 +20,6 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton pattern to ensure only one AudioManager exists
         if (instance == null)
         {
             instance = this;
@@ -40,7 +39,7 @@ public class AudioManager : MonoBehaviour
 
     private void InitializeAudio()
     {
-        // Set up background music
+        // background music
         audioSource.clip = background;
         audioSource.Play();
 

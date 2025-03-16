@@ -48,7 +48,7 @@ public class Quiz : MonoBehaviour
     {
         checkButton.onClick.AddListener(CheckAnswer);
         if (retryButton != null) retryButton.onClick.AddListener(Retry);
-        if (menuButton != null) menuButton.onClick.AddListener(ReturnToHome);
+        if (menuButton != null) menuButton.onClick.AddListener(Levels);
 
         InitializeQuiz();
         ShowTutorial();
@@ -161,7 +161,7 @@ public class Quiz : MonoBehaviour
 
         if (string.IsNullOrEmpty(userAnswer))
         {
-            ShowFeedback("Please drag a letter to the answer box!", Color.yellow);
+            ShowFeedback("Drag a letter to the box!", Color.yellow);
             return;
         }
 
@@ -229,10 +229,6 @@ public class Quiz : MonoBehaviour
         {
             scorePanel.SetActive(true);
         }
-        if (scoreText != null)
-        {
-            scoreText.text = $"Score: {score} / {questions.Length}";
-        }
     }
 
     public void Retry()
@@ -241,9 +237,8 @@ public class Quiz : MonoBehaviour
         InitializeQuiz();
     }
 
-    public void ReturnToHome()
+    public void Levels()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Home");
+        SceneManager.LoadScene("Syllabus");
     }
 }
