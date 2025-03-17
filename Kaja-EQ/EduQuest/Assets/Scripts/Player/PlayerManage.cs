@@ -10,6 +10,7 @@ public class PlayerManage : MonoBehaviour
 
     public static Vector2 lastCP = new Vector2(-11, -3);
     public static int NoOfCoins;
+    public static int totalMarks = 0; // Total marks scored
     public TextMeshProUGUI CoinsTxt;
 
     private void Awake()
@@ -45,15 +46,9 @@ public class PlayerManage : MonoBehaviour
 
     public void RestartGame()
     {
-        // Reset the coin count when restarting the game
-        NoOfCoins = 0;
-        PlayerPrefs.DeleteKey("CheckpointCoins");
-        PlayerPrefs.SetInt("NoOfCoins", NoOfCoins);
-        lastCP = new Vector2(-11, -3); // Reset checkpoint to initial position
-
-        // Clear all checkpoint activation states
-        ClearCheckpointData();
-
+        // Reset the game state when restarting the game
+        ResetGameState();
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -73,20 +68,27 @@ public class PlayerManage : MonoBehaviour
 
     public void GotoMenu()
     {
-        // Reset the coin count when going to the main menu
-        NoOfCoins = 0;
-        PlayerPrefs.DeleteKey("CheckpointCoins");
-        PlayerPrefs.SetInt("NoOfCoins", NoOfCoins);
-        lastCP = new Vector2(-11, -3); // Reset checkpoint position to the initial position or any default position
-
-        // Clear all checkpoint activation states
-        ClearCheckpointData();
-
+        // Reset the game state when going to the main menu
+        ResetGameState();
         SceneManager.LoadScene("Menu");
         AudioListener.pause = false;
     }
 
-    private void ClearCheckpointData()
+    public static void ResetGameState()
+    {
+        // Reset all game state variables
+        NoOfCoins = 0;
+        totalMarks = 0;
+        PlayerPrefs.DeleteKey("CheckpointCoins");
+        PlayerPrefs.SetInt("NoOfCoins", NoOfCoins);
+        lastCP = new Vector2(-11, -3); // Reset checkpoint to initial position
+
+        // Clear all checkpoint activation states
+        ClearCheckpointData();
+    }
+
+    // Make this method static
+    private static void ClearCheckpointData()
     {
         // Find all checkpoints in the scene and clear their activation states
         GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint");

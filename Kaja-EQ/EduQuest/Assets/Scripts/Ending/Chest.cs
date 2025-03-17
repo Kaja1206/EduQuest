@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public GameObject endingPanel; // Reference to the ending panel UI
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.transform.tag == "Player")
+        {
+            // Show the ending panel
+            if (endingPanel != null)
+            {
+                endingPanel.SetActive(true);
+                Time.timeScale = 0; // Pause the game
+            }
+        }
     }
 }
