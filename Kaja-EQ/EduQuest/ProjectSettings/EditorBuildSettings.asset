@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/MathsMenu.unity
     guid: c05e9b20ebdc6d14c9b03ad9cd573625
   - enabled: 1
     path: Assets/Scenes/MathsLev1.unity
@@ -14,8 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MathsLev2.unity
     guid: 4e8e47d5dae14274d9cb6e24885e3c91
-  - enabled: 0
-    path: Assets/Scenes/EnglishLev1.unity
+  - enabled: 1
+    path: Assets/Scenes/EnglishMenu.unity
+    guid: 6b426fee32883f048bfca50498865849
+  - enabled: 1
+    path: Assets/Scenes/English.unity
     guid: 03067d065098d78438328d88551a7a57
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 01ff8ddbc7d84cf4da367ddab10008dc, type: 2}

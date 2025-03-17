@@ -70,7 +70,15 @@ public class PlayerManage : MonoBehaviour
     {
         // Reset the game state when going to the main menu
         ResetGameState();
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MathsMenu");
+        AudioListener.pause = false;
+    }
+
+    public void GotoEngMenu()
+    {
+        // Reset the game state when going to the main menu
+        ResetGameState();
+        SceneManager.LoadScene("EnglishMenu");
         AudioListener.pause = false;
     }
 
