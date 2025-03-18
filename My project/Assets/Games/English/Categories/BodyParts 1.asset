@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee645df8bbfd6944af26bfd294dfbc4, type: 3}
+  m_Name: BodyParts 1
+  m_EditorClassIdentifier: 
+  category: BodyParts 1
+  questions:
+  - questionText: Which body part is this?
+    replies:
+    - Hair
+    - Eyebrowse
+    - Ear
+    - Eye
+    correctReplyIndex: 0
+    questionImage: {fileID: 0}
+  - questionText: Which body part is this?
+    replies:
+    - 
+    - 
+    - 
+    - 
+    correctReplyIndex: 0
+    questionImage: {fileID: 0}
+  - questionText: Which body part is this?
+    replies:
+    - Tongue
+    - Mouth
+    - Eyebrowse
+    - Foot
+    correctReplyIndex: 2
+    questionImage: {fileID: 3727333057909046494, guid: 44e52969be1116c4b9cc14daad24fba3,
+      type: 3}
+  - questionText: Which body part is this?
+    replies:
+    - Ear
+    - Foot
+    - Leg
+    - Finger
+    correctReplyIndex: 3
+    questionImage: {fileID: -7164639588303836088, guid: b6af2b18dc92ab04697d46dc50552aa7,
+      type: 3}
+  - questionText: Which body part is this?
+    replies:
+    - Nose
+    - Foot
+    - Mouth
+    - Eye
+    correctReplyIndex: 1
+    questionImage: {fileID: 4018814452851649147, guid: f68e6d2d76328f949b357ddaea0af88a,
+      type: 3}
+  - questionText: Which body part is this?
+    replies:
+    - Ear
+    - Eye
+    - Hair
+    - Leg
+    correctReplyIndex: 2
+    questionImage: {fileID: 6291076074326483787, guid: c8c65aadd2f84464d991f455bc99b572,
+      type: 3}
+  - questionText: Which body part is this?
+    replies:
+    - Eye
+    - Hair
+    - Finger
+    - Leg
+    correctReplyIndex: 3
+    questionImage: {fileID: 1730826577450134818, guid: 858ac78ae0afc7d459116ee05a2b92f1,
+      type: 3}
+  - questionText: Which body part is this?
+    replies:
+    - Tongue
+    - Mouth
+    - Leg
+    - Nose
+    correctReplyIndex: 1
+    questionImage: {fileID: -8624616599934999286, guid: 05e7ce05957e0c9479e52d5c38e4f2a5,
+      type: 3}
+  - questionText: Which body part is this?
+    replies:
+    - Foot
+    - Hair
+    - Nose
+    - Mouth
+    correctReplyIndex: 2
+    questionImage: {fileID: 629553134381121590, guid: 401f5cfa59304c646991af1e3b0eb8bb,
+      type: 3}
+  - questionText: Which body part is this?
+    replies:
+    - Finger
+    - Nose
+    - Mouth
+    - Tongue
+    correctReplyIndex: 3
+    questionImage: {fileID: 8100426479800741977, guid: 71f178232ed43474b920a7f41a84e544,
+      type: 3}
