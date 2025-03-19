@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class Quiz : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class Quiz : MonoBehaviour
     public Text[] optionTexts;
     public DropZone answerDropZone;
     public Button checkButton;
+    
+    [Header("Quiz Settings")]
+    public int numberOfQuestionsToAsk = 20; 
+    public bool preventRepeatQuestions = true; 
 
     [Header("UI Elements")]
     public AudioManager audioManager;
@@ -38,14 +43,40 @@ public class Quiz : MonoBehaviour
     public Button retryButton;
     public Button menuButton;
 
-    private int currentQuestionIndex = 0;
+    [Header("Audio")]
+    public AudioClip correctSound;
+    public AudioClip wrongSound;
+
+    private List<int> questionIndices = new List<int>(); 
+    private int currentQuestionNumber = 0; 
     private int score = 0;
     private bool isProcessingAnswer = false;
+    private AudioSource localAudioSource;
 
     PauseMenu pauseMenu;
 
+    private void Awake()
+    {
+        
+        localAudioSource = GetComponent<AudioSource>();
+        if (localAudioSource == null)
+        {
+            localAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
+
     private void Start()
     {
+        
+        if (audioManager == null)
+        {
+            audioManager = FindAnyObjectByType<AudioManager>();
+            if (audioManager == null)
+            {
+                Debug.LogWarning("AudioManager not found in scene. Using local audio playback instead.");
+            }
+        }
+
         checkButton.onClick.AddListener(CheckAnswer);
         if (retryButton != null) retryButton.onClick.AddListener(Retry);
         if (menuButton != null) menuButton.onClick.AddListener(Levels);
@@ -65,33 +96,42 @@ public class Quiz : MonoBehaviour
 
     IEnumerator TutorialSequence()
     {
-        // Show drag arrow first
+        
         if (dragArrow != null)
         {
             dragArrow.SetActive(true);
-            StartCoroutine(AnimateArrow(dragArrow.GetComponent<RectTransform>(), Vector2.right));
+            if (dragArrow.GetComponent<RectTransform>() != null)
+            {
+                StartCoroutine(AnimateArrow(dragArrow.GetComponent<RectTransform>(), Vector2.right));
+            }
             yield return new WaitForSeconds(3f);
         }
 
-        // Show drop arrow next
+        
         if (dropArrow != null)
         {
             dragArrow.SetActive(false);
             dropArrow.SetActive(true);
-            StartCoroutine(AnimateArrow(dropArrow.GetComponent<RectTransform>(), Vector2.up));
+            if (dropArrow.GetComponent<RectTransform>() != null)
+            {
+                StartCoroutine(AnimateArrow(dropArrow.GetComponent<RectTransform>(), Vector2.up));
+            }
             yield return new WaitForSeconds(3f);
         }
 
-        // Show check arrow last
+        
         if (checkArrow != null)
         {
             dropArrow.SetActive(false);
             checkArrow.SetActive(true);
-            StartCoroutine(AnimateArrow(checkArrow.GetComponent<RectTransform>(), Vector2.left));
+            if (checkArrow.GetComponent<RectTransform>() != null)
+            {
+                StartCoroutine(AnimateArrow(checkArrow.GetComponent<RectTransform>(), Vector2.left));
+            }
             yield return new WaitForSeconds(3f);
         }
 
-        // Hide tutorial
+        
         if (tutorialPanel != null)
         {
             tutorialPanel.SetActive(false);
@@ -105,6 +145,11 @@ public class Quiz : MonoBehaviour
 
     IEnumerator AnimateArrow(RectTransform arrowRect, Vector2 direction)
     {
+        if (arrowRect == null)
+        {
+            yield break;
+        }
+        
         Vector2 startPos = arrowRect.anchoredPosition;
         Vector2 endPos = startPos + (direction * arrowMoveDistance);
 
@@ -118,9 +163,17 @@ public class Quiz : MonoBehaviour
 
     void InitializeQuiz()
     {
-        currentQuestionIndex = 0;
+        
+        currentQuestionNumber = 0;
         score = 0;
+        
+        
+        GenerateRandomQuestionSequence();
+        
+        
         DisplayQuestion();
+        
+        
         if (feedbackText != null)
         {
             feedbackText.gameObject.SetActive(false);
@@ -134,12 +187,53 @@ public class Quiz : MonoBehaviour
             quizPanel.SetActive(true);
         }
     }
+    
+    void GenerateRandomQuestionSequence()
+    {
+        
+        questionIndices.Clear();
+        
+        
+        int questionsToUse = Mathf.Min(numberOfQuestionsToAsk, questions.Length);
+        
+        if (preventRepeatQuestions)
+        {
+            
+            List<int> availableIndices = new List<int>();
+            for (int i = 0; i < questions.Length; i++)
+            {
+                availableIndices.Add(i);
+            }
+            
+            
+            for (int i = 0; i < questionsToUse; i++)
+            {
+                if (availableIndices.Count == 0) break;
+                
+                int randomIndex = Random.Range(0, availableIndices.Count);
+                questionIndices.Add(availableIndices[randomIndex]);
+                availableIndices.RemoveAt(randomIndex);
+            }
+        }
+        else
+        {
+            
+            for (int i = 0; i < questionsToUse; i++)
+            {
+                questionIndices.Add(Random.Range(0, questions.Length));
+            }
+        }
+        
+        Debug.Log($"Generated random question sequence with {questionIndices.Count} questions");
+    }
 
     void DisplayQuestion()
     {
-        if (currentQuestionIndex < questions.Length)
+        if (currentQuestionNumber < questionIndices.Count)
         {
-            QuizQuestion currentQuestion = questions[currentQuestionIndex];
+            int questionIndex = questionIndices[currentQuestionNumber];
+            QuizQuestion currentQuestion = questions[questionIndex];
+            
             questionText.text = currentQuestion.question;
 
             for (int i = 0; i < optionTexts.Length; i++)
@@ -149,6 +243,8 @@ public class Quiz : MonoBehaviour
                     optionTexts[i].text = currentQuestion.options[i];
                 }
             }
+            
+            Debug.Log($"Displaying question {currentQuestionNumber + 1}/{questionIndices.Count}: {currentQuestion.question}");
         }
     }
 
@@ -156,6 +252,7 @@ public class Quiz : MonoBehaviour
     {
         if (isProcessingAnswer) return;
 
+        int currentQuestionIndex = questionIndices[currentQuestionNumber];
         string userAnswer = answerDropZone.GetCurrentLetter();
         Debug.Log($"User Answer: {userAnswer}, Correct Answer: {questions[currentQuestionIndex].correctAnswer}");
 
@@ -169,17 +266,87 @@ public class Quiz : MonoBehaviour
 
         if (userAnswer.ToLower() == questions[currentQuestionIndex].correctAnswer.ToLower())
         {
-            if (audioManager != null) audioManager.PlaySFX(audioManager.correct);
+            PlayCorrectSound();
             ShowFeedback("Correct!", Color.green);
             score++;
         }
         else
         {
-            if (audioManager != null) audioManager.PlaySFX(audioManager.wrong);
+            PlayWrongSound();
             ShowFeedback("Wrong!", Color.red);
         }
 
         StartCoroutine(NextQuestionDelay());
+    }
+
+    void PlayCorrectSound()
+    {
+        bool soundPlayed = false;
+
+        
+        if (audioManager != null)
+        {
+            if (audioManager.correct != null)
+            {
+                audioManager.PlaySFX(audioManager.correct);
+                soundPlayed = true;
+            }
+            else if (correctSound != null)
+            {
+                audioManager.PlaySFX(correctSound);
+                soundPlayed = true;
+            }
+        }
+
+        
+        if (!soundPlayed && correctSound != null)
+        {
+            if (localAudioSource != null)
+            {
+                localAudioSource.PlayOneShot(correctSound);
+                soundPlayed = true;
+            }
+            else
+            {
+                AudioSource.PlayClipAtPoint(correctSound, Camera.main.transform.position);
+                soundPlayed = true;
+            }
+        }
+    }
+
+    void PlayWrongSound()
+    {
+        bool soundPlayed = false;
+
+        
+        if (audioManager != null)
+        {
+            if (audioManager.wrong != null)
+            {
+                audioManager.PlaySFX(audioManager.wrong);
+                soundPlayed = true;
+            }
+            else if (wrongSound != null)
+            {
+                audioManager.PlaySFX(wrongSound);
+                soundPlayed = true;
+            }
+        }
+
+        
+        if (!soundPlayed && wrongSound != null)
+        {
+            if (localAudioSource != null)
+            {
+                localAudioSource.PlayOneShot(wrongSound);
+                soundPlayed = true;
+            }
+            else
+            {
+                AudioSource.PlayClipAtPoint(wrongSound, Camera.main.transform.position);
+                soundPlayed = true;
+            }
+        }
     }
 
     void ShowFeedback(string message, Color color)
@@ -207,8 +374,8 @@ public class Quiz : MonoBehaviour
 
     void NextQuestion()
     {
-        currentQuestionIndex++;
-        if (currentQuestionIndex >= questions.Length)
+        currentQuestionNumber++;
+        if (currentQuestionNumber >= questionIndices.Count)
         {
             ShowScore();
         }
@@ -229,6 +396,10 @@ public class Quiz : MonoBehaviour
         {
             scorePanel.SetActive(true);
         }
+        if (scoreText != null)
+        {
+            scoreText.text = $"{score}/{questionIndices.Count}";
+        }
     }
 
     public void Retry()
@@ -239,6 +410,17 @@ public class Quiz : MonoBehaviour
 
     public void Levels()
     {
-        SceneManager.LoadScene("Syllabus");
+        if (SceneUtility.GetBuildIndexByScenePath("Syllabus") >= 0)
+        {
+            SceneManager.LoadScene("Syllabus");
+        }
+        else
+        {
+            Debug.LogError("Scene 'Syllabus' is not in the build settings.");
+            if (SceneManager.sceneCountInBuildSettings > 0)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
     }
 }

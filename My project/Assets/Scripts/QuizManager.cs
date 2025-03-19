@@ -27,7 +27,7 @@ public class QuizManager : MonoBehaviour
     public float delayBetweenQuestions = 0.5f;
     public float feedbackDisplayTime = 0.5f;
     public float feedbackAnimationDuration = 0.5f;
-    public float timeThreshold = 10f; // Time threshold in seconds
+    public float timeThreshold = 10f; 
 
     private List<QuestionAndAnswers> currentQuestionPool;
     private List<QuestionAndAnswers> usedQuestions = new List<QuestionAndAnswers>();
@@ -48,7 +48,7 @@ public class QuizManager : MonoBehaviour
 
     private void Start()
     {
-        currentQuestionPool = easyQuestions; // Start with easy questions
+        currentQuestionPool = easyQuestions; 
         GoPanel.SetActive(false);
         if (feedbackText != null)
         {
@@ -288,7 +288,7 @@ public class QuizManager : MonoBehaviour
             }
             else if (currentQuestionPool == easyQuestions)
             {
-                // If we're already at easy, try medium or hard
+                
                 if (mediumQuestions.Count > 0)
                 {
                     currentQuestionPool = mediumQuestions;
@@ -301,7 +301,7 @@ public class QuizManager : MonoBehaviour
                 }
             }
 
-            // Try generating again with the new pool
+            
             generateQuestion();
         }
         else

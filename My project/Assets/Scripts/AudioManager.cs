@@ -39,15 +39,13 @@ public class AudioManager : MonoBehaviour
 
     private void InitializeAudio()
     {
-        // background music
         audioSource.clip = background;
         audioSource.Play();
 
-        // Load saved volume settings
         float savedVolume = PlayerPrefs.GetFloat("GameVolume", 1f);
         SetVolume(savedVolume);
 
-        // Initialize volume slider
+        
         if (volumeSlider != null)
         {
             volumeSlider.value = savedVolume;
@@ -69,14 +67,14 @@ public class AudioManager : MonoBehaviour
         audioSource.volume = volume;
         SFXSource.volume = volume;
 
-        // Save volume for all scenes
+        
         PlayerPrefs.SetFloat("GameVolume", volume);
         PlayerPrefs.Save();
 
         Debug.Log("Volume set to: " + volume);
     }
 
-    // Call this method when entering a new scene
+    
     public void UpdateVolumeSlider()
     {
         if (volumeSlider != null)

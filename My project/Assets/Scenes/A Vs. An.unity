@@ -294,12 +294,74 @@ MonoBehaviour:
     - a
     - the
     correctAnswer: 2
+  - question: My father is __ engineer.
+    options:
+    - an
+    - a
+    - the
+    correctAnswer: 1
+  - question: I watched __ interesting show
+    options:
+    - an
+    - a
+    - the
+    correctAnswer: 1
+  - question: She bought __ book from the store
+    options:
+    - an
+    - a
+    - the
+    correctAnswer: 2
+  - question: Which article should be used before "giraffe"?
+    options:
+    - an
+    - a
+    - the
+    correctAnswer: 2
+  - question: Which article should be used before "apple"?
+    options:
+    - an
+    - a
+    - the
+    correctAnswer: 1
+  - question: Which article should be used before "honest boy"?
+    options:
+    - an
+    - a
+    - the
+    correctAnswer: 1
+  - question: She has ___ idea about the story.
+    options:
+    - an
+    - a
+    - the
+    correctAnswer: 1
+  - question: There is __ cat sitting on the roof.
+    options:
+    - the
+    - a
+    - an
+    correctAnswer: 2
+  - question: That is __ unusual sight to see.
+    options:
+    - the
+    - a
+    - an
+    correctAnswer: 3
+  - question: 'Which article should be used before the word "umbrella"? '
+    options:
+    - the
+    - a
+    - an
+    correctAnswer: 3
   optionTexts:
   - {fileID: 611896169}
   - {fileID: 1159506920}
   - {fileID: 1815894309}
   answerDropZone: {fileID: 1575455685}
   checkButton: {fileID: 695818606}
+  numberOfQuestionsToAsk: 20
+  preventRepeatQuestions: 1
   audioManager: {fileID: 0}
   quizPanel: {fileID: 1665686929}
   scorePanel: {fileID: 688312772}
@@ -308,6 +370,8 @@ MonoBehaviour:
   feedbackText: {fileID: 1433417593}
   retryButton: {fileID: 0}
   menuButton: {fileID: 0}
+  correctSound: {fileID: 8300000, guid: 844bf47162a05ac4ba927c676c31b67e, type: 3}
+  wrongSound: {fileID: 8300000, guid: 46887ad1911b9424db1246eee6df60af, type: 3}
 --- !u!4 &112401824
 Transform:
   m_ObjectHideFlags: 0
@@ -352,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f46c916b90ef9344a19a2017c3dc6bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letter: A, B, C
+  letter: 
 --- !u!4 &160136740
 Transform:
   m_ObjectHideFlags: 0
@@ -361,12 +425,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160136738}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 431.68448, y: 157.35963, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.409332, y: -73.359055, z: 0}
+  m_LocalScale: {x: 2.5174377, y: 2.5174377, z: 2.5174377}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1695539810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &167333988
 GameObject:
@@ -1014,7 +1078,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1096776711}
-  - {fileID: 2090298901}
   - {fileID: 1854268241}
   - {fileID: 978082802}
   - {fileID: 2137347111}
@@ -2929,6 +2992,7 @@ RectTransform:
   - {fileID: 850558939}
   - {fileID: 688312773}
   - {fileID: 386853354}
+  - {fileID: 160136740}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3478,7 +3542,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2090298901}
   m_Father: {fileID: 688312773}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -3909,12 +3974,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 688312773}
+  m_Father: {fileID: 1854268241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 500, y: 229}
-  m_SizeDelta: {x: 480.098, y: 223.744}
+  m_AnchoredPosition: {x: 803.43, y: -111.87201}
+  m_SizeDelta: {x: -351.00198, y: 223.744}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090298902
 MonoBehaviour:
@@ -4284,4 +4349,3 @@ SceneRoots:
   - {fileID: 112401824}
   - {fileID: 1124602361}
   - {fileID: 1055574816}
-  - {fileID: 160136740}

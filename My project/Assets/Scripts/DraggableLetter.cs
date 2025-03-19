@@ -19,7 +19,6 @@ public class DraggableLetter : MonoBehaviour
         originalParent = transform.parent;
     }
 
-    // Public methods that will be visible in the Event Trigger
     public void StartDragging()
     {
         isDragging = true;
