@@ -14,22 +14,22 @@ public class QuestionPanel : MonoBehaviour
 
     private Question currentQuestion; // The current question being displayed
     private float startTime; // Time when the question is displayed
-    private int nextQuestionDifficulty = 1; // Default difficulty for the next question
+    private int nextQuestionDifficulty = 1; // Default difficulty for the next question (1 = Easy, 2 = Medium, 3 = Hard)
+
+    // Map difficulty index to its name
+    private string[] difficultyNames = { "Easy", "Medium", "Hard" };
 
     private void Start()
     {
-        // Hide panels initially
         correctAnswerPanel.SetActive(false);
         wrongAnswerPanel.SetActive(false);
 
-        // Add listeners to the resume buttons
         correctResumeButton.onClick.AddListener(ResumeGame);
         wrongResumeButton.onClick.AddListener(ResumeGame);
     }
 
     private void OnEnable()
     {
-        // Load a question when the panel is enabled
         LoadQuestion();
     }
 
@@ -37,69 +37,61 @@ public class QuestionPanel : MonoBehaviour
     {
         if (questionManager == null)
         {
-            Debug.LogError("QuestionManager is not assigned!");
             return;
         }
 
-        // Get a question based on the current difficulty
         currentQuestion = questionManager.GetQuestionByDifficulty(nextQuestionDifficulty);
 
         if (currentQuestion != null)
         {
-            // Display the question text
             questionText.text = currentQuestion.questionText;
 
-            // Display the answers on the buttons
             for (int i = 0; i < answerButtons.Length; i++)
             {
                 if (i < currentQuestion.answers.Length)
                 {
                     answerButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.answers[i];
+                    answerButtons[i].gameObject.SetActive(true);
                 }
                 else
                 {
-                    answerButtons[i].gameObject.SetActive(false); // Hide unused buttons
+                    answerButtons[i].gameObject.SetActive(false);
                 }
             }
 
-            // Start the timer
             startTime = Time.time;
         }
         else
         {
-            Debug.LogWarning("No question available!");
+            ResumeGame();
         }
     }
 
     public void OnAnswerSelected(int selectedIndex)
     {
-        // Calculate the response time
         float responseTime = Time.time - startTime;
+        bool isCorrect = selectedIndex == currentQuestion.correctAnswerIndex;
 
-        // Determine the difficulty of the next question based on response time
-        if (responseTime <= 10f)
+        if (isCorrect)
         {
-            // Player answered quickly, increase difficulty
-            nextQuestionDifficulty = Mathf.Min(3, nextQuestionDifficulty + 1); // Cap at 3 (hard)
+            if (responseTime <= 10f)
+            {
+                nextQuestionDifficulty = Mathf.Min(3, nextQuestionDifficulty + 1);
+            }
         }
         else
         {
-            // Player answered slowly, decrease difficulty
-            nextQuestionDifficulty = Mathf.Max(1, nextQuestionDifficulty - 1); // Cap at 1 (easy)
+            nextQuestionDifficulty = Mathf.Max(1, nextQuestionDifficulty - 1);
         }
 
-        if (selectedIndex == currentQuestion.correctAnswerIndex)
+        if (isCorrect)
         {
-            // Correct answer
             correctAnswerPanel.SetActive(true);
             wrongAnswerPanel.SetActive(false);
-
-            // Update total marks (each correct question = 2 marks)
             PlayerManage.totalMarks += 2;
         }
         else
         {
-            // Wrong answer
             wrongAnswerPanel.SetActive(true);
             correctAnswerPanel.SetActive(false);
         }
@@ -107,15 +99,12 @@ public class QuestionPanel : MonoBehaviour
 
     public void ResumeGame()
     {
-        // Hide the question panel and feedback panels
         gameObject.SetActive(false);
         correctAnswerPanel.SetActive(false);
         wrongAnswerPanel.SetActive(false);
 
-        // Resume the game
         Time.timeScale = 1;
 
-        // Load the next question (if needed)
         LoadQuestion();
     }
 }
