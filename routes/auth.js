@@ -63,6 +63,26 @@ router.post("/login", async (req, res) => {
   }
 });
 
+const authenticateUser = require("./middleware/authMiddleware");
 
+//Protected Routes
+router.get("/profile", authenticateUser, async (req, res) => {
+  try {
+      const user = await User.findById(req.user.id).select("-password"); // Exclude password
+      res.json(user);
+  } catch (err) {
+      res.status(500).json({ message: "Server error" });
+  }
+});
+
+// Logout User
+router.post("/logout", (req, res) => {
+  res.clearCookie("token", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "Strict",
+  });
+  res.json({ message: "Logged out successfully" });
+});
 
 module.exports = router;
