@@ -2,29 +2,33 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
+//Initialize Express app
 const app = express();
-app.use(express.json());
-app.use(cors());
 
-// Simple route to check if the server is running
+// Middleware
+app.use(express.json());
+app.use(cookieParser());
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+}));
+
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI)
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.error("MongoDB Connection Error: ", err));
+
+//Use authentication routes
+app.use("/api/auth", require("./routes/auth"));
+
+// Test Route
 app.get("/", (req, res) => {
-  res.send("EduQuest Backend is running...");
+  res.send("EduQuest Backend Running");
 });
 
-// MongoDB connection
+// Start Server
 const PORT = process.env.PORT || 5000;
-mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log("MongoDB Connected");
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-  })
-  .catch((err) => console.log(err));
-
-
-const authRoutes = require("./routes/auth");
-const progressRoutes = require("./routes/progress");
-
-app.use("/auth", authRoutes);
-app.use("/progress", progressRoutes);
+app.listen(PORT, () => 
+  console.log(`Server running on port ${PORT}`));
