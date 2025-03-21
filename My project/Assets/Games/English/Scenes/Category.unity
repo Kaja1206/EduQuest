@@ -467,7 +467,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1036304654}
         m_TargetAssemblyTypeName: CategoryManager, Assembly-CSharp
         m_MethodName: OnCategorySelected
         m_Mode: 3
@@ -691,9 +691,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 3cce55eaf60d3b843b4109670201edd4, type: 3}
+      - m_Target: {fileID: 1036304654}
         m_TargetAssemblyTypeName: CategoryManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: OnCategorySelected
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -905,7 +905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000015258789, y: -10}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 0, y: -94.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589468181
@@ -1090,7 +1090,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1036304654}
         m_TargetAssemblyTypeName: CategoryManager, Assembly-CSharp
         m_MethodName: OnCategorySelected
         m_Mode: 3
@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1036304654}
         m_TargetAssemblyTypeName: CategoryManager, Assembly-CSharp
         m_MethodName: OnCategorySelected
         m_Mode: 3
@@ -2140,10 +2140,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c9fe6c9c2010b7b41a9b22dc3c875ae6, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 1036304654}
+        m_TargetAssemblyTypeName: CategoryManager, Assembly-CSharp
+        m_MethodName: OnCategorySelected
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1036304654}
         m_TargetAssemblyTypeName: CategoryManager, Assembly-CSharp
         m_MethodName: OnCategorySelected
         m_Mode: 3
@@ -2629,10 +2629,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1012373802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.011028, y: -0.12677002}
-  m_SizeDelta: {x: 988.13, y: 485.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1616217649
 MonoBehaviour:

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using UnityEngine.UI;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
     public Button[] replyButtons;
 
     [Header("Score")]
-    public ScoreManager score;
+    public EnglishScoreManager score;
     public int correctReply = 10;
     public int wrongReply = 0;
     public TextMeshProUGUI scoreText;

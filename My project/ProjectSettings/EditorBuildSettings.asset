@@ -24,14 +24,26 @@ EditorBuildSettings:
     path: Assets/Games/English/Scenes/Category.unity
     guid: 68984fcd831faff4aa7ba0d492c1bd01
   - enabled: 1
+    path: Assets/Games/English/Scenes/Quiz English.unity
+    guid: 8edfce33397e0b546a0aeb345db8909e
+  - enabled: 0
     path: Assets/Games/English/Scenes/English 1.unity
     guid: ba809f9dfa3d1ce4aaed990f602b2f2f
   - enabled: 0
-    path: Assets/Games/Maths/Adding/Scence/MainMenu.unity
+    path: Assets/Games/Maths/Basic games/MathsMainMenu.unity
+    guid: d7ae2fdcdb488194791b82761c6ff7fb
+  - enabled: 0
+    path: Assets/Games/Maths/Basic games/Adding/AdditionMainMenu.unity
     guid: 3be4d81632ad1864b842427fc3fa3317
   - enabled: 0
-    path: Assets/Games/Maths/Adding/Scence/Maths.unity
+    path: Assets/Games/Maths/Basic games/Adding/Maths.unity
     guid: b6efa2b481c09f24391cf5c7dd6a79b2
+  - enabled: 0
+    path: Assets/Games/Maths/Basic games/Substraction/SubMainMenu.unity
+    guid: 560736e593d9aa64c9fa93018cc2be8a
+  - enabled: 0
+    path: Assets/Games/Maths/Basic games/Substraction/Substraction.unity
+    guid: ac3427b014d740f47aa2cd63d9d55d04
   - enabled: 0
     path: Assets/English/EnglishMenu.unity
     guid: bde51c4c87551834189301f6bc7f84b8

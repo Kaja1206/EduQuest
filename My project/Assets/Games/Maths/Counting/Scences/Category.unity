@@ -2748,7 +2748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9fe6c9c2010b7b41a9b22dc3c875ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  categories: []
+  categories:
+  - {fileID: 0}
   selectedCategory: {fileID: 0}
   questionText: {fileID: 265900991}
   questionImage: {fileID: 1753623856}

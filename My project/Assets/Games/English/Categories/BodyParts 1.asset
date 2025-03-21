@@ -20,16 +20,18 @@ MonoBehaviour:
     - Eyebrowse
     - Ear
     - Eye
-    correctReplyIndex: 0
-    questionImage: {fileID: 0}
+    correctReplyIndex: 2
+    questionImage: {fileID: -6685732630041737972, guid: 63c4c7f3da2f6844bbb967d976b5c437,
+      type: 3}
   - questionText: Which body part is this?
     replies:
-    - 
-    - 
-    - 
-    - 
-    correctReplyIndex: 0
-    questionImage: {fileID: 0}
+    - Finger
+    - Nose
+    - Mouth
+    - Eye
+    correctReplyIndex: 3
+    questionImage: {fileID: 49417335881396728, guid: 2190f0f70e29f714892c0c1bc6319712,
+      type: 3}
   - questionText: Which body part is this?
     replies:
     - Tongue
