@@ -20,7 +20,7 @@ public class AnswerScript1 : MonoBehaviour
     private void Start()
     {
         startColor = GetComponent<Image>().color;
-        encouragementManager = FindObjectOfType<EncouragementManager>();
+        encouragementManager = FindFirstObjectByType<EncouragementManager>();
     }
 
     public void Answer()
