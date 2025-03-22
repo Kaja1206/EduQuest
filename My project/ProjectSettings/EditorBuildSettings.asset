@@ -17,16 +17,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Gr2 S2 M.unity
     guid: 057aa8da7ffb7d54f96d6fb5d6c0d97f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu2.unity
     guid: 760c5342e76bca542aa0e5da610a5935
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Gr2 S1 E.unity
     guid: 82237cd606b25fb4297ef0e6b1dbba09
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu3.unity
     guid: 7f09a5b89c0054848bf4eaf0f2645f9a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gr2 S2 E.unity
     guid: 539df9acd6ad6544ba1c453739bdaa90
   - enabled: 0
