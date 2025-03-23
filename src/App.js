@@ -19,7 +19,7 @@ import Progress from "./components/Progress";
 import Courses from "./components/Courses";
 import Challenges from "./components/Challanges";
 import ContactForm from './components/ContactForm';
-
+import TechnicalSupport from './components/TechnicalSupport';
 
 
 import AccountIssues from './components/AccountIssues';
@@ -50,7 +50,7 @@ function App() {
           <Route path="/register" element={<Register/>} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/achievements" element={<Achievements />} />
-          
+          <Route path="/tech-Support" element={<TechnicalSupport />} />
           
           
           
