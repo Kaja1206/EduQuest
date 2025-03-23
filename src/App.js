@@ -17,7 +17,7 @@ import Rewards from "./components/Rewards";
 import Progress from "./components/Progress";
 import Courses from "./components/Courses";
 import Challenges from "./components/Challanges";
-
+import ContactForm from './components/ContactForm';
 
 
 
@@ -38,7 +38,7 @@ function App() {
           <Route path="/auth" element={<Auth />} />
           <Route path="/games" element={<GameSelection />} />
           <Route path="/challenges" element={<Challenges />} />
-          
+          <Route path="/contact-Form" element={<ContactForm />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/parental-dashboard" element={<ParentalDashboard />} />
           <Route path="/contact-us" element={<ContactUs />} />
