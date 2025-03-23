@@ -8,13 +8,14 @@ import Auth from "./components/Auth";
 import GameSelection from "./components/GameSelection";
 import Dashboard from "./components/Dashboard";
 import ParentalDashboard from "./components/ParentalDashboard";
-
+import Career from "./components/Career";
 
 
 import Achievements from "./components/Achivements";
 import Rewards from "./components/Rewards";
 import Progress from "./components/Progress";
 import Courses from "./components/Courses";
+import Challenges from "./components/Challanges";
 
 
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/games" element={<GameSelection />} />
+          <Route path="/challenges" element={<Challenges />} />
           
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/parental-dashboard" element={<ParentalDashboard />} />
@@ -42,6 +44,7 @@ function App() {
           <Route path="/rewards" element={<Rewards />} /> 
           <Route path="/progress" element={<Progress />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="/career" element={<Career />} />
           
           <Route path="/achievements" element={<Achievements />} />
           
