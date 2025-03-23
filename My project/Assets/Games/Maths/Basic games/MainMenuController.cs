@@ -12,10 +12,4 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene("SubMainMenu");
     }
-
-    public void QuitGame()
-    {
-        Debug.Log("Quit!");
-        Application.Quit();
-    }
 }

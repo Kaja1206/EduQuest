@@ -10,8 +10,8 @@ public class SubQuizManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
 
-    public GameObject QuizPanel;
-    public GameObject GoPanel;
+    public GameObject SubQuizPanel;
+    public GameObject GOPanel;
 
     public GameObject FeedbackPanel;
     public Text FeedbackText;
@@ -26,7 +26,7 @@ public class SubQuizManager : MonoBehaviour
     private void Start()
     {
         totalQuestions = QnA.Count;
-        GoPanel.SetActive(false);
+        GOPanel.SetActive(false);
         FeedbackPanel.SetActive(false);
         generateQuestion();
     }
@@ -38,10 +38,11 @@ public class SubQuizManager : MonoBehaviour
 
     void GameOver()
     {
-        QuizPanel.SetActive(false);
-        GoPanel.SetActive(true);
+        SubQuizPanel.SetActive(false);
+        GOPanel.SetActive(true);
         ScoreTxt.text = score + "/" + totalQuestions;
     }
+
     public void Correct()
     {
         score += 1;
@@ -52,7 +53,7 @@ public class SubQuizManager : MonoBehaviour
     {
         ShowFeedback("Oh, That's incorrect", Color.red);
     }
-    
+
     void ShowFeedback(string message, Color color)
     {
         FeedbackText.text = message;
@@ -89,8 +90,7 @@ public class SubQuizManager : MonoBehaviour
             return;
         }
 
-        // Prevent array index out of bounds error
-        if (QnA[currentQuestion].Answers.Length != options.Length)
+        if (QnA[currentQuestion].Answers.Length != options.Length)
         {
             Debug.LogError("Mismatch between answer choices and UI options. Check your data!");
             return;
@@ -98,31 +98,30 @@ public class SubQuizManager : MonoBehaviour
 
         for (int i = 0; i < options.Length; i++)
         {
-            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor;
+            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript1>().startColor; // Corrected here
         }
 
         for (int i = 0; i < options.Length; i++)
         {
-            options[i].GetComponent<AnswerScript>().isCorrect = false;
+            options[i].GetComponent<AnswerScript1>().isCorrect = false; // Corrected here
             options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];
 
             if (QnA[currentQuestion].CorrectAnswer == i + 1)
             {
-                options[i].GetComponent<AnswerScript>().isCorrect = true;
+                options[i].GetComponent<AnswerScript1>().isCorrect = true; // Corrected here
             }
         }
     }
-
 
     void generateQuestion()
     {
         if (QnA.Count > 0)
         {
+            ResetButtonColors();
             currentQuestion = Random.Range(0, QnA.Count);
             QuestionTxt.text = QnA[currentQuestion].Question;
             SetAnswer();
         }
-
         else
         {
             Debug.Log("No more questions available.");
@@ -134,7 +133,7 @@ public class SubQuizManager : MonoBehaviour
     {
         for (int i = 0; i < options.Length; i++)
         {
-            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript>().startColor;
+            options[i].GetComponent<Image>().color = options[i].GetComponent<AnswerScript1>().startColor; // Corrected here
         }
     }
 }

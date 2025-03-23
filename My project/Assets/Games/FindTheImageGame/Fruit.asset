@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5fd61115c2e8143a2b033864214304, type: 3}
+  m_Name: Fruit
+  m_EditorClassIdentifier: 
+  category: 
+  questions:
+  - questionText: What fruit is this?
+    replies:
+    - Grapes
+    - Apple
+    - Mango
+    - Banana
+    correctReplyIndex: 1
+    questionImage: {fileID: 7293598183456022363, guid: ef6f1074c8d7e8b49a89be2ab763c7f2,
+      type: 3}
+  - questionText: What fruit is this?
+    replies:
+    - Orange
+    - Apple
+    - Watermelon
+    - Banana
+    correctReplyIndex: 3
+    questionImage: {fileID: -9182177788924653191, guid: e66707307194ded46b73149561dc2d2b,
+      type: 3}
+  - questionText: What fruit is this?
+    replies:
+    - Mango
+    - Lemon
+    - Grapes
+    - Pineapple
+    correctReplyIndex: 2
+    questionImage: {fileID: -8781457552448529170, guid: 950c9864384083c4e928eacea3c7cf81,
+      type: 3}
+  - questionText: What fruit is this?
+    replies:
+    - Apple
+    - Stawberry
+    - Mango
+    - Lemon
+    correctReplyIndex: 3
+    questionImage: {fileID: 8025649199667744028, guid: 08f1d74f83dbf9544866c91c3c2a161c,
+      type: 3}
+  - questionText: What fruit is this?
+    replies:
+    - Grapes
+    - Apple
+    - Mango
+    - Banana
+    correctReplyIndex: 2
+    questionImage: {fileID: -3968840770022985357, guid: b8a0253083c6c914e95e4df8d74e2bf3,
+      type: 3}
+  - questionText: What fruit is this?
+    replies:
+    - Grapes
+    - Apple
+    - Orange
+    - papaya
+    correctReplyIndex: 2
+    questionImage: {fileID: 4121880872312635667, guid: d93348b9cba310948a62f4016c5b5221,
+      type: 3}
+  - questionText: What fruit is this?
+    replies:
+    - Pineapple
+    - Banana
+    - Papaya
+    - Banana
+    correctReplyIndex: 2
+    questionImage: {fileID: 128204969806665292, guid: 3db7ef7cc98659248af343cbfb523264,
+      type: 3}
+  - questionText: What fruit is this?
+    replies:
+    - Papaya
+    - Grapes
+    - Mango
+    - Pineapple
+    correctReplyIndex: 3
+    questionImage: {fileID: 837517196756356485, guid: 53065d8c0453bd14b926c27eb5036e8a,
+      type: 3}
+  - questionText: What fruit is this?
+    replies:
+    - Apple
+    - Stawberry
+    - Lemon
+    - Banana
+    correctReplyIndex: 1
+    questionImage: {fileID: -6960866633516577811, guid: 0f17c1efef4fa884297006ce26e36e8d,
+      type: 3}
+  - questionText: What fruit is this?
+    replies:
+    - Grapes
+    - Papaya
+    - Watermelon
+    - Banana
+    correctReplyIndex: 2
+    questionImage: {fileID: -8558258358756935692, guid: d849152f30f91fb4fb876013ee3ad973,
+      type: 3}
