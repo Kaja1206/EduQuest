@@ -9,6 +9,7 @@ import GameSelection from "./components/GameSelection";
 import Dashboard from "./components/Dashboard";
 import ParentalDashboard from "./components/ParentalDashboard";
 import Career from "./components/Career";
+import Register from "./components/Register";
 
 
 import Achievements from "./components/Achivements";
@@ -45,6 +46,7 @@ function App() {
           <Route path="/progress" element={<Progress />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/career" element={<Career />} />
+          <Route path="/register" element={<Register/>} />
           
           <Route path="/achievements" element={<Achievements />} />
           
