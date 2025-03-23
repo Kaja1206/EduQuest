@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 52fec14b1d9c05e479888f44c214042f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Mod Resources/Scripts/Platformer/Jiggler.cs
+  uploadId: 683079

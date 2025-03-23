@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7e16423d12f4445cc93a21506562dffc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Custom Materials/Modulate Green.mat
+  uploadId: 683079

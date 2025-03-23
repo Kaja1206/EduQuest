@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 08006af621afc407eb6a5c8e8c83b0bf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Custom Materials/Emissive Green.mat
+  uploadId: 683079

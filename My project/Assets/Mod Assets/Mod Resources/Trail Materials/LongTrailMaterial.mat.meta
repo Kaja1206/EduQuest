@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dbd73125b5e3c429ea6c920ebcc9dd92
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Mod Resources/Trail Materials/LongTrailMaterial.mat
+  uploadId: 683079

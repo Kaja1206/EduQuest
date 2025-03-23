@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1af7aa0c4bbc40243accca84055907cc
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Mod Resources/Shaders/SpritesHue.shader
+  uploadId: 683079

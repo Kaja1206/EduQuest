@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 81f12af2d69874700b7e15004bd15886
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Custom Materials/Emissive Red.mat
+  uploadId: 683079

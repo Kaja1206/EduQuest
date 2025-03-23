@@ -6,32 +6,34 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/MainMenu.unity
-    guid: 5ac7fb15d4dc334459fa0feb33e5bb2b
+    path: Assets/Games/FindTheImageGame/Menu 1.unity
+    guid: 6b331f0012ea76140931ec5cf647fe3d
   - enabled: 0
-    path: Assets/Scenes/Gr2 S1 M.unity
-    guid: 528b0f04cf99fc444a8c80f2e92ed5c2
+    path: Assets/Games/FindTheImageGame/FindTheImageEnglish 1.unity
+    guid: e61cc8560c445e546b2dc5fe9ac6fa78
   - enabled: 0
-    path: Assets/Scenes/MainMenu1.unity
-    guid: 42ac9830467b340468d812ca213cd9ce
+    path: Assets/Games/FindTheImageGame/Menu.unity
+    guid: d83efdf56f12b994891b09a99935531e
   - enabled: 0
-    path: Assets/Scenes/Gr2 S2 M.unity
-    guid: 057aa8da7ffb7d54f96d6fb5d6c0d97f
+    path: Assets/Games/FindTheImageGame/Category.unity
+    guid: e2e69f436dd11f14ca8c8c958d8818c5
+  - enabled: 0
+    path: Assets/Games/FindTheImageGame/FindTheImageEnglish.unity
+    guid: 3ba6cc27c78705e4f8196b4bbe88df80
   - enabled: 1
-    path: Assets/Scenes/MainMenu2.unity
-    guid: 760c5342e76bca542aa0e5da610a5935
+    path: Assets/Games/Maths/Basic games/MainMenuController.unity
+    guid: 84b670e3316cc8d44bbbcfffb1be87da
   - enabled: 1
-    path: Assets/Scenes/Gr2 S1 E.unity
-    guid: 82237cd606b25fb4297ef0e6b1dbba09
-  - enabled: 0
-    path: Assets/Scenes/MainMenu3.unity
-    guid: 7f09a5b89c0054848bf4eaf0f2645f9a
-  - enabled: 0
-    path: Assets/Scenes/Gr2 S2 E.unity
-    guid: 539df9acd6ad6544ba1c453739bdaa90
-  - enabled: 0
-    path: Assets/Scenes/Gr2 S1 L1.unity
-    guid: be5e29ed5f5e3e24da027eb6ccd6d5a6
-  m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+    path: Assets/Games/Maths/Basic games/Adding/AdditionMainMenu.unity
+    guid: 3be4d81632ad1864b842427fc3fa3317
+  - enabled: 1
+    path: Assets/Games/Maths/Basic games/Adding/Maths.unity
+    guid: b6efa2b481c09f24391cf5c7dd6a79b2
+  - enabled: 1
+    path: Assets/Games/Maths/Basic games/Substraction/SubMainMenu.unity
+    guid: 560736e593d9aa64c9fa93018cc2be8a
+  - enabled: 1
+    path: Assets/Games/Maths/Basic games/Substraction/Substraction.unity
+    guid: ac3427b014d740f47aa2cd63d9d55d04
+  m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

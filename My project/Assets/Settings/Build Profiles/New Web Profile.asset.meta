@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 141d35e7bcfcc1e438c611393a0d9373
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 270762
+  packageName: Rainbow Forest - Free Pixel-Art
+  packageVersion: 
+  assetPath: Assets/Settings/Renderer2D.asset
+  uploadId: 0

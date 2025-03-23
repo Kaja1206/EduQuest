@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 88003508be39e449cb51c48494e680cf
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Mod Resources/Fonts/PressStart2P-Regular SDF.asset
+  uploadId: 683079
