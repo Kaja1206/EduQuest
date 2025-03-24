@@ -1,4 +1,5 @@
 const express = require("express");
+const GameSession = require("../models/GameSession");
 const GameProgress = require("../models/GameProgress");
 const authenticateUser = require("../middleware/authMiddleware"); // Authentication middleware
 const router = express.Router();
@@ -50,6 +51,42 @@ router.get("/game-progress", authenticateUser, async (req, res) => {
     res.status(200).json(gameProgress); // Send back the progress data
   } catch (err) {
     res.status(500).json({ message: "Error fetching progress", error: err });
+  }
+});
+
+// POST: Save Game Session
+router.post("/save-session", verifyToken, async (req, res) => {
+  try {
+    const { grade, subject, score, progress, timeSpent } = req.body;
+    const userId = req.user.id;
+
+    const newSession = new GameSession({
+      userId,
+      grade,
+      subject,
+      score,
+      progress,
+      timeSpent,
+    });
+
+    await newSession.save();
+    res.json({ message: "Session saved!", session: newSession });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+// GET: Fetch All Sessions for a Child
+router.get("/sessions", verifyToken, async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const sessions = await GameSession.find({ userId }).sort({ playedAt: -1 });
+
+    res.json(sessions);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Server error" });
   }
 });
 
