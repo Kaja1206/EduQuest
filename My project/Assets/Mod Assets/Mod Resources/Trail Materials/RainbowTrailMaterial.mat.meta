@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 711224fcf6d6c40faafe946b2f78b361
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Mod Assets/Mod Resources/Trail Materials/RainbowTrailMaterial.mat
+  uploadId: 683079

@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5fd61115c2e8143a2b033864214304, type: 3}
+  m_Name: Dress
+  m_EditorClassIdentifier: 
+  category: 
+  questions:
+  - questionText: What is this?
+    replies:
+    - Tie
+    - Shoe
+    - Belt
+    - Hat
+    correctReplyIndex: 2
+    questionImage: {fileID: 7576011095104966051, guid: ab37591a727d05340846a16ef7f1ea81,
+      type: 3}
+  - questionText: What is this?
+    replies:
+    - Belt
+    - Shoe
+    - Hat
+    - Frock
+    correctReplyIndex: 3
+    questionImage: {fileID: -7321844622633239782, guid: 6b9e94e9caaaed44387588aa157ca97d,
+      type: 3}
+  - questionText: What is this?
+    replies:
+    - Socks
+    - Gloves
+    - Shirt
+    - Hat
+    correctReplyIndex: 1
+    questionImage: {fileID: 6829406338367461404, guid: 6cd85024594256349a88462754c94bca,
+      type: 3}
+  - questionText: What is this?
+    replies:
+    - Frock
+    - Skirt
+    - Belt
+    - Hat
+    correctReplyIndex: 3
+    questionImage: {fileID: -1836120431684336037, guid: 6f6b1fae7ded4ad42b0b5a75d8adaf38,
+      type: 3}
+  - questionText: What is this?
+    replies:
+    - Skirt
+    - Shoe
+    - Shirt
+    - Tie
+    correctReplyIndex: 2
+    questionImage: {fileID: -7490180441346702064, guid: 9f42051a6b4b2e247bee7aba9b4c8dbf,
+      type: 3}
+  - questionText: What is this?
+    replies:
+    - Belt
+    - Shoes
+    - Hat
+    - Gloves
+    correctReplyIndex: 1
+    questionImage: {fileID: 2371641743025836735, guid: 042d711de4351fc49a51426a1a018396,
+      type: 3}
+  - questionText: What is this?
+    replies:
+    - Tie
+    - Tshirt
+    - Skirt
+    - Hat
+    correctReplyIndex: 2
+    questionImage: {fileID: 1530105913813767182, guid: be71da9834f07d042861e771fb79dbed,
+      type: 3}
+  - questionText: What is this?
+    replies:
+    - Hat
+    - Shoe
+    - Frock
+    - Socks
+    correctReplyIndex: 3
+    questionImage: {fileID: -1976466997711170374, guid: f8a4ed03936432b47a51bba92d456d1c,
+      type: 3}
+  - questionText: What is this?
+    replies:
+    - Belt
+    - Tie
+    - Tshirt
+    - Shoes
+    correctReplyIndex: 1
+    questionImage: {fileID: 3886566792514238645, guid: 4a37c89fcf3a35240b98dcec94417561,
+      type: 3}
+  - questionText: What is this?
+    replies:
+    - Tie
+    - Tshirt
+    - shirt
+    - Gloves
+    correctReplyIndex: 1
+    questionImage: {fileID: -8010340093674138757, guid: a324e90e4ddaa384582d5ec3dbc5b85d,
+      type: 3}

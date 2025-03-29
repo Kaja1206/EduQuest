@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5fd61115c2e8143a2b033864214304, type: 3}
+  m_Name: Counting
+  m_EditorClassIdentifier: 
+  category: Counting
+  questions:
+  - questionText: How many balloons are here?
+    replies:
+    - 5
+    - 3
+    - 4
+    - 2
+    correctReplyIndex: 1
+    questionImage: {fileID: 5738808026026955811, guid: b695aff135fb8af41881c75aad1a9591,
+      type: 3}
+  - questionText: How many birds are here?
+    replies:
+    - 6
+    - 3
+    - 4
+    - 5
+    correctReplyIndex: 2
+    questionImage: {fileID: 6985345755391978807, guid: 558a986e1a22e294e866316eb319c830,
+      type: 3}
+  - questionText: How many candies are here?
+    replies:
+    - 2
+    - 3
+    - 5
+    - 4
+    correctReplyIndex: 3
+    questionImage: {fileID: -1402486514000126413, guid: bfd16b7f900dd884791742a09f740d6f,
+      type: 3}
+  - questionText: How many balls are here?
+    replies:
+    - 2
+    - 4
+    - 5
+    - 3
+    correctReplyIndex: 1
+    questionImage: {fileID: 6606447940880435433, guid: 6c36cc7a35c6c2846894ddc6a766a1bf,
+      type: 3}
+  - questionText: How many cars are here?
+    replies:
+    - 4
+    - 8
+    - 5
+    - 7
+    correctReplyIndex: 2
+    questionImage: {fileID: 8282042346942556162, guid: 3086d59652c8043458ecfaeb8c923e95,
+      type: 3}
+  - questionText: How many stars are here?
+    replies:
+    - 6
+    - 4
+    - 3
+    - 7
+    correctReplyIndex: 2
+    questionImage: {fileID: 5142051254436797643, guid: 7f0544e3d3adcc145a9ede190f1a1e6f,
+      type: 3}
+  - questionText: How many tress are here?
+    replies:
+    - 5
+    - 3
+    - 6
+    - 8
+    correctReplyIndex: 2
+    questionImage: {fileID: -8667466294985060184, guid: 94bc39adf87ac884c8915137d3385867,
+      type: 3}
+  - questionText: How many big bats are here?
+    replies:
+    - 5
+    - 6
+    - 4
+    - 3
+    correctReplyIndex: 3
+    questionImage: {fileID: -2048251983285237723, guid: 12a5636f0df759b43a3470e3317397cc,
+      type: 3}
+  - questionText: How many apples are here?
+    replies:
+    - 10
+    - 8
+    - 7
+    - 5
+    correctReplyIndex: 2
+    questionImage: {fileID: 4978424162507891905, guid: 1c586513f70cf8a4ba1518881fbc1708,
+      type: 3}
+  - questionText: How many bears are here?
+    replies:
+    - 2
+    - 3
+    - 4
+    - 5
+    correctReplyIndex: 1
+    questionImage: {fileID: 3551233614117194328, guid: 8a23fb21ad994cc49b8ce98d3e119bbf,
+      type: 3}

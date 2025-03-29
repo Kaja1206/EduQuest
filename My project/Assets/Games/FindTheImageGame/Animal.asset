@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5fd61115c2e8143a2b033864214304, type: 3}
+  m_Name: Animal
+  m_EditorClassIdentifier: 
+  category: 
+  questions:
+  - questionText: Which animal is this?
+    replies:
+    - Monkey
+    - Giraffe
+    - Dog
+    - Fish
+    correctReplyIndex: 2
+    questionImage: {fileID: -3994744024693093290, guid: c8d1d5613e34dce4da0698664a7199cb,
+      type: 3}
+  - questionText: Which animal is this?
+    replies:
+    - Tortoise
+    - Elephant
+    - Pig
+    - Rabbit
+    correctReplyIndex: 1
+    questionImage: {fileID: 832877967638892730, guid: c8e6e2e757b942449853dbfdb126253e,
+      type: 3}
+  - questionText: Which animal is this?
+    replies:
+    - Dog
+    - Elephant
+    - Monkey
+    - Fish
+    correctReplyIndex: 3
+    questionImage: {fileID: -1915776564401465818, guid: 94a3474a635569944afbd75e380fc6e2,
+      type: 3}
+  - questionText: Which animal is this?
+    replies:
+    - Lion
+    - Panda
+    - Giraffe
+    - Pig
+    correctReplyIndex: 2
+    questionImage: {fileID: -4295607627919525082, guid: 20cdd581b3ed79947bb92827a4aa2a00,
+      type: 3}
+  - questionText: Which animal is this?
+    replies:
+    - Elephant
+    - Fish
+    - Rabbit
+    - Lion
+    correctReplyIndex: 3
+    questionImage: {fileID: -1224384326437599908, guid: 37c3b8971d4b9274687e71ac8b9c4aa1,
+      type: 3}
+  - questionText: Which animal is this?
+    replies:
+    - Lion
+    - Pig
+    - Monkey
+    - Panda
+    correctReplyIndex: 2
+    questionImage: {fileID: 973301482186294925, guid: e1b8f56f2dfa7f845a5a4fed0dce76da,
+      type: 3}
+  - questionText: Which animal is this?
+    replies:
+    - Giraffe
+    - Panda
+    - Elephant
+    - Pig
+    correctReplyIndex: 1
+    questionImage: {fileID: 9056969288295072004, guid: 2938b2b12dbd89f46ad7a1b04ea1972e,
+      type: 3}
+  - questionText: Which animal is this?
+    replies:
+    - Lion
+    - Tortoise
+    - Pig
+    - Dog
+    correctReplyIndex: 2
+    questionImage: {fileID: -9122695006515159614, guid: c457841055d9863449573033c5f2a817,
+      type: 3}
+  - questionText: Which animal is this?
+    replies:
+    - Dog
+    - Rabbit
+    - Fish
+    - Elephant
+    correctReplyIndex: 1
+    questionImage: {fileID: -222240863053324594, guid: 3b5c5771d8ca2d448b143626b714e6f0,
+      type: 3}
+  - questionText: Which animal is this?
+    replies:
+    - Dog
+    - Fish
+    - Tortoise
+    - Pig
+    correctReplyIndex: 2
+    questionImage: {fileID: 5797606746199597790, guid: 045d754444ed2894eb251f58041bd9f3,
+      type: 3}

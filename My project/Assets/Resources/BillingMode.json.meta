@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 79ced8952bf2e9448b43af8ec282060c
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 151055
+  packageName: Platformer Microgame
+  packageVersion: 4.0
+  assetPath: Assets/Resources/BillingMode.json
+  uploadId: 683079
